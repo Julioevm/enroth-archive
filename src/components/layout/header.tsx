@@ -8,6 +8,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
@@ -61,6 +63,9 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Main Menu</SheetTitle>
+              </SheetHeader>
                <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
                 <Swords className="h-6 w-6 text-primary" />
                 <span className="font-headline font-bold text-lg">Enroth Archive</span>
