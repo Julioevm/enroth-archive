@@ -59,6 +59,42 @@
       "description": "Map of Temple of Baa",
       "imageUrl": "https://images.unsplash.com/photo-1662307414188-334c0b5713e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxldmlsJTIwdGVtcGxlfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "evil temple"
+    },
+    {
+      "id": "new-sorpigal-tile",
+      "description": "World map tile for New Sorpigal",
+      "imageUrl": "https://images.unsplash.com/photo-1729508706538-c2afd70c1fc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYW50YXN5JTIwY29hc3R8ZW58MHx8fHwxNzY1OTgzODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy coast"
+    },
+    {
+      "id": "castle-ironfist-tile",
+      "description": "World map tile for Castle Ironfist",
+      "imageUrl": "https://images.unsplash.com/photo-1672084721188-1e3f78d96e80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYW50YXN5JTIwcGxhaW5zfGVufDB8fHx8MTc2NTk4MzgzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy plains"
+    },
+    {
+      "id": "mist-tile",
+      "description": "World map tile for Mist",
+      "imageUrl": "https://images.unsplash.com/photo-1581331213497-feaacc34337f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtaXN0eSUyMGlzbGFuZHxlbnwwfHx8fDE3NjU5ODM4MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "misty island"
+    },
+    {
+      "id": "bootleg-bay-tile",
+      "description": "World map tile for Bootleg Bay",
+      "imageUrl": "https://images.unsplash.com/photo-1672383733879-a60ee955ed18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaXJhdGUlMjBiYXl8ZW58MHx8fHwxNzY1OTgzODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pirate bay"
+    },
+    {
+      "id": "free-haven-tile",
+      "description": "World map tile for Free Haven",
+      "imageUrl": "https://images.unsplash.com/photo-1668992488083-c0e64a9b926c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYW50YXN5JTIwY2l0eXxlbnwwfHx8fDE3NjU5NTg5MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy city"
+    },
+    {
+      "id": "silver-cove-tile",
+      "description": "World map tile for Silver Cove",
+      "imageUrl": "https://images.unsplash.com/photo-1734147337962-a3f5364955ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3VudGFpbiUyMGNvdmV8ZW58MHx8fHwxNzY1OTgzODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain cove"
     }
   ]
 }
