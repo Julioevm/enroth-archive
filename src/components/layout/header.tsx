@@ -12,6 +12,7 @@ const navItems = [
   { name: 'Monsters', href: '/monsters' },
   { name: 'Spells', href: '/spells' },
   { name: 'Items', href: '/items' },
+  { name: 'Shrines', href: '/shrines' },
 ];
 
 export function SiteHeader() {

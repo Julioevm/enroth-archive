@@ -69,3 +69,10 @@ export interface Item {
     description: string;
     cost: number;
 }
+
+export interface Shrine {
+    id: string;
+    month: string;
+    name: string;
+    location: string;
+}
