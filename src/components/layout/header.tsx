@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Swords } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -26,7 +27,7 @@ export function SiteHeader() {
           <Swords className="h-6 w-6 text-primary" />
           <span className="font-headline font-bold text-lg">Enroth Archive</span>
         </Link>
-        <nav className="flex items-center gap-6 text-sm">
+        <nav className="flex flex-1 items-center gap-6 text-sm">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -40,6 +41,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
+        <ThemeToggle />
       </div>
     </header>
   );
