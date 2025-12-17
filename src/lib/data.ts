@@ -1,4 +1,4 @@
-import type { Area, Dungeon, Quest, Skill } from './types';
+import type { Area, Dungeon, Quest, Skill, Monster, Spell, Item } from './types';
 
 const skills: Skill[] = [
   {
@@ -189,6 +189,81 @@ const areas: Area[] = [
   }
 ];
 
+const monsters: Monster[] = [
+    {
+        id: 'goblin',
+        name: 'Goblin',
+        description: 'A small, cruel humanoid that often travels in packs.',
+        hp: 15,
+        attack: 'Claws (1d4)',
+        locations: ['New Sorpigal', 'Goblinwatch'],
+    },
+    {
+        id: 'bat',
+        name: 'Bat',
+        description: 'A flying mammal that can be a nuisance in dark caves.',
+        hp: 5,
+        attack: 'Bite (1d2)',
+        locations: ['Abandoned Temple'],
+    },
+    {
+        id: 'thief',
+        name: 'Thief',
+        description: 'A nimble rogue who preys on the unwary.',
+        hp: 25,
+        attack: 'Dagger (1d4)',
+        locations: ['Free Haven'],
+    },
+];
+
+const spells: Spell[] = [
+    {
+        id: 'torch-light',
+        name: 'Torch Light',
+        school: 'Fire',
+        description: 'Creates a magical light source that follows the party.',
+        cost: '1 SP',
+    },
+    {
+        id: 'first-aid',
+        name: 'First Aid',
+        school: 'Body',
+        description: 'Heals a small amount of damage to a single character.',
+        cost: '2 SP',
+    },
+    {
+        id: 'bless',
+        name: 'Bless',
+        school: 'Spirit',
+        description: 'Temporarily increases a character\'s Accuracy and Damage.',
+        cost: '3 SP',
+    },
+];
+
+const items: Item[] = [
+    {
+        id: 'short-sword',
+        name: 'Short Sword',
+        type: 'Weapon',
+        description: 'A basic one-handed sword.',
+        cost: 25,
+    },
+    {
+        id: 'leather-armor',
+        name: 'Leather Armor',
+        type: 'Armor',
+        description: 'Armor made from tanned leather.',
+        cost: 50,
+    },
+    {
+        id: 'healing-potion',
+        name: 'Healing Potion',
+        type: 'Potion',
+        description: 'A magical potion that restores health.',
+        cost: 30,
+    },
+];
+
 // Data access functions
 export async function getSkills(): Promise<Skill[]> {
   return skills;
@@ -216,4 +291,16 @@ export async function getDungeonBySlug(slug: string): Promise<Dungeon | undefine
 
 export async function getDungeonsByIds(ids: string[]): Promise<Dungeon[]> {
     return dungeons.filter(d => ids.includes(d.id));
+}
+
+export async function getMonsters(): Promise<Monster[]> {
+    return monsters;
+}
+
+export async function getSpells(): Promise<Spell[]> {
+    return spells;
+}
+
+export async function getItems(): Promise<Item[]> {
+    return items;
 }

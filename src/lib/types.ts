@@ -44,3 +44,28 @@ export interface Skill {
   description: string;
   trainers: SkillTrainer[];
 }
+
+export interface Monster {
+    id: string;
+    name: string;
+    description: string;
+    hp: number;
+    attack: string;
+    locations: string[];
+}
+
+export interface Spell {
+    id: string;
+    name: string;
+    school: 'Spirit' | 'Body' | 'Mind' | 'Fire' | 'Air' | 'Water' | 'Earth' | 'Light' | 'Dark';
+    description: string;
+    cost: string;
+}
+
+export interface Item {
+    id: string;
+    name: string;
+    type: 'Weapon' | 'Armor' | 'Shield' | 'Accessory' | 'Potion' | 'Reagent';
+    description: string;
+    cost: number;
+}

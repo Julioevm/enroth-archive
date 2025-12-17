@@ -9,6 +9,9 @@ const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Quests', href: '/quests' },
   { name: 'Skills', href: '/skills' },
+  { name: 'Monsters', href: '/monsters' },
+  { name: 'Spells', href: '/spells' },
+  { name: 'Items', href: '/items' },
 ];
 
 export function SiteHeader() {
