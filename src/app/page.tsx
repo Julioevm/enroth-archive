@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { getAreas } from '@/lib/data';
-import { AreaCard } from '@/components/area-card';
-import { getPlaceholderImage } from '@/lib/images';
+import { areaCoordinates } from '@/lib/data/map_coordinates';
 
 export default async function Home() {
   const areas = await getAreas();
@@ -16,9 +16,29 @@ export default async function Home() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+      <div className="relative w-full max-w-7xl mx-auto">
+        <Image
+          src="/map_enroth.png"
+          alt="Map of Enroth"
+          width={1400}
+          height={900}
+          layout="responsive"
+          objectFit="contain"
+        />
         {areas.map((area) => (
-          <AreaCard key={area.id} area={area} image={getPlaceholderImage(area.mapImageId)} />
+          <a
+            key={area.id}
+            href={`/areas/${area.slug}`}
+            className="absolute rounded-full bg-blue-500 opacity-50 hover:opacity-75"
+            style={{
+              left: `${areaCoordinates[area.slug]?.left || 0}%`,
+              top: `${areaCoordinates[area.slug]?.top || 0}%`,
+              width: `${areaCoordinates[area.slug]?.width || 0}%`,
+              height: `${areaCoordinates[area.slug]?.height || 0}%`,
+            }}
+          >
+            <span className="sr-only">{area.name}</span>
+          </a>
         ))}
       </div>
     </div>
