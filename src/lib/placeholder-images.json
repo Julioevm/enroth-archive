@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "new-sorpigal-map",
+      "description": "Map of New Sorpigal",
+      "imageUrl": "https://images.unsplash.com/photo-1720253814850-0b81a96f52ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYW50YXN5JTIwbWFwfGVufDB8fHx8MTc2NTg3NTMzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy map"
+    },
+    {
+      "id": "castle-ironfist-map",
+      "description": "Map of Castle Ironfist",
+      "imageUrl": "https://images.unsplash.com/photo-1654594809787-8bb951f25c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXN0bGUlMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "castle map"
+    },
+    {
+      "id": "mist-map",
+      "description": "Map of Mist",
+      "imageUrl": "https://images.unsplash.com/photo-1704495349692-bfa4d214a508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aXNsYW5kJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "island map"
+    },
+    {
+      "id": "bootleg-bay-map",
+      "description": "Map of Bootleg Bay",
+      "imageUrl": "https://images.unsplash.com/photo-1738502602077-0738750b1f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiYXklMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bay map"
+    },
+    {
+      "id": "free-haven-map",
+      "description": "Map of Free Haven",
+      "imageUrl": "https://images.unsplash.com/photo-1619468129361-605ebea04b44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NTkwNTU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    },
+    {
+      "id": "silver-cove-map",
+      "description": "Map of Silver Cove",
+      "imageUrl": "https://images.unsplash.com/photo-1691506513931-4740e203d1a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb3ZlJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cove map"
+    },
+    {
+      "id": "goblinwatch-dungeon-map",
+      "description": "Map of Goblinwatch Dungeon",
+      "imageUrl": "https://images.unsplash.com/photo-1570309977742-90c800236330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkdW5nZW9uJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dungeon map"
+    },
+    {
+      "id": "abandoned-temple-dungeon-map",
+      "description": "Map of Abandoned Temple",
+      "imageUrl": "https://images.unsplash.com/photo-1747071766407-a8d72a802a10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZW1wbGUlMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "temple map"
+    },
+    {
+      "id": "shadow-guild-hideout-map",
+      "description": "Map of Shadow Guild Hideout",
+      "imageUrl": "https://images.unsplash.com/photo-1625239622428-ba0ae330a1f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoaWRlb3V0JTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hideout map"
+    },
+    {
+      "id": "temple-of-baa-map",
+      "description": "Map of Temple of Baa",
+      "imageUrl": "https://images.unsplash.com/photo-1662307414188-334c0b5713e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxldmlsJTIwdGVtcGxlfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "evil temple"
+    }
+  ]
 }
