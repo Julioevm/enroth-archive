@@ -4,7 +4,7 @@ export interface GameLocation {
 }
 
 export interface TravelRoutes {
-  byFoot: string[];
+  byFoot: { destination: string; direction: string; }[];
   coach: { destination: string; days: string; cost: number }[];
   boat: { destination: string; days: string; cost: number }[];
 }
@@ -74,6 +74,7 @@ export interface Item {
     name: string;
     type: 'Weapon' | 'Armor' | 'Shield' | 'Accessory' | 'Potion' | 'Reagent';
     description: string;
+    cost: number;
 }
 
 export interface Shrine {

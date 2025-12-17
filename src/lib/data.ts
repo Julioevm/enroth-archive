@@ -124,7 +124,7 @@ const areas: Area[] = [
       { id: 'ns-tavern', name: 'Inn' },
     ],
     travel: {
-      byFoot: ['Castle Ironfist'],
+      byFoot: [{ destination: 'Castle Ironfist', direction: 'West' }],
       coach: [
         { destination: 'Castle Ironfist', days: 'Mon, Wed, Fri', cost: 10 },
         { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 20 },
@@ -147,7 +147,10 @@ const areas: Area[] = [
       { id: 'ci-well', name: 'Well' },
     ],
     travel: {
-      byFoot: ['New Sorpigal', 'Free Haven'],
+      byFoot: [
+        { destination: 'New Sorpigal', direction: 'East' },
+        { destination: 'Free Haven', direction: 'West' }
+      ],
       coach: [
         { destination: 'New Sorpigal', days: 'Mon, Wed, Fri', cost: 10 },
         { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 10 },
@@ -209,7 +212,10 @@ const areas: Area[] = [
       { id: 'fh-temple', name: 'Temple' },
     ],
     travel: {
-      byFoot: ['Castle Ironfist', 'Silver Cove'],
+      byFoot: [
+        { destination: 'Castle Ironfist', direction: 'East' },
+        { destination: 'Silver Cove', direction: 'West' }
+      ],
       coach: [
         { destination: 'New Sorpigal', days: 'Mon, Wed, Fri', cost: 20 },
         { destination: 'Castle Ironfist', days: 'Tue, Thu, Sat', cost: 10 },
@@ -232,7 +238,7 @@ const areas: Area[] = [
       { id: 'sc-witches-lair', name: 'Witches Lair' },
     ],
     travel: {
-      byFoot: ['Free Haven'],
+      byFoot: [{ destination: 'Free Haven', direction: 'East' }],
       coach: [
         { destination: 'Free Haven', days: 'Mon, Thu', cost: 15 },
       ],
@@ -395,7 +401,12 @@ export async function getSpells(): Promise<Spell[]> {
 }
 
 export async function getItems(): Promise<Item[]> {
-    return items;
+    // This is a placeholder. In a real app, you'd fetch this from a database.
+    return [
+        { id: '1', name: 'Short Sword', type: 'Weapon', description: 'A basic one-handed sword.', cost: 50 },
+        { id: '2', name: 'Leather Armor', type: 'Armor', description: 'Armor made from tanned leather.', cost: 100 },
+        { id: '3', name: 'Healing Potion', type: 'Potion', description: 'A magical potion that restores health.', cost: 25 },
+    ];
 }
 
 export async function getShrines(): Promise<Shrine[]> {

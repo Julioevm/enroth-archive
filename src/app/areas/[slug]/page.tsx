@@ -76,7 +76,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
               <div>
                 <h3 className="font-semibold flex items-center gap-2 mb-2"><LandPlot className="w-4 h-4 text-muted-foreground" /> By Foot</h3>
                 <ul className="list-disc list-inside text-muted-foreground">
-                  {area.travel.byFoot.map(dest => <li key={dest}>{dest}</li>)}
+                  {area.travel.byFoot.map(route => <li key={route.destination}>{route.destination} ({route.direction})</li>)}
                 </ul>
               </div>
 
