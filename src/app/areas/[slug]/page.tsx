@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LocationDetails } from '@/components/location-details';
 import Link from 'next/link';
-import { MapPin, Scroll, ShieldQuestion } from 'lucide-react';
+import { MapPin, Scroll, ShieldQuestion, LandPlot, Sailboat, Bus } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 type AreaPageProps = {
   params: {
@@ -63,6 +64,49 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   </li>
                 ))}
               </ul>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader className="flex flex-row items-center gap-2">
+              <LandPlot className="w-5 h-5 text-primary" />
+              <CardTitle className="font-headline text-2xl">Travel</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="font-semibold flex items-center gap-2 mb-2"><LandPlot className="w-4 h-4 text-muted-foreground" /> By Foot</h3>
+                <ul className="list-disc list-inside text-muted-foreground">
+                  {area.travel.byFoot.map(dest => <li key={dest}>{dest}</li>)}
+                </ul>
+              </div>
+
+              {(area.travel.coach.length > 0 || area.travel.boat.length > 0) && <Separator />}
+
+              {area.travel.coach.length > 0 && (
+                <div>
+                  <h3 className="font-semibold flex items-center gap-2 mb-2"><Bus className="w-4 h-4 text-muted-foreground" /> Coach</h3>
+                  <ul className="space-y-1 text-muted-foreground">
+                    {area.travel.coach.map(route => (
+                      <li key={route.destination}>
+                        {route.destination} ({route.days}) - {route.cost}g
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {area.travel.boat.length > 0 && (
+                 <div>
+                  <h3 className="font-semibold flex items-center gap-2 mb-2"><Sailboat className="w-4 h-4 text-muted-foreground" /> Boat</h3>
+                  <ul className="space-y-1 text-muted-foreground">
+                    {area.travel.boat.map(route => (
+                      <li key={route.destination}>
+                        {route.destination} ({route.days}) - {route.cost}g
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </CardContent>
           </Card>
 

@@ -123,6 +123,16 @@ const areas: Area[] = [
       { id: 'ns-stable', name: 'Stable' },
       { id: 'ns-tavern', name: 'Inn' },
     ],
+    travel: {
+      byFoot: ['Castle Ironfist'],
+      coach: [
+        { destination: 'Castle Ironfist', days: 'Mon, Wed, Fri', cost: 10 },
+        { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 20 },
+      ],
+      boat: [
+        { destination: 'Mist', days: 'Mon, Thu', cost: 15 },
+      ]
+    }
   },
   {
     id: 'castle-ironfist',
@@ -136,6 +146,14 @@ const areas: Area[] = [
       { id: 'ci-dragon-rider', name: 'Dragon Rider' },
       { id: 'ci-well', name: 'Well' },
     ],
+    travel: {
+      byFoot: ['New Sorpigal', 'Free Haven'],
+      coach: [
+        { destination: 'New Sorpigal', days: 'Mon, Wed, Fri', cost: 10 },
+        { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 10 },
+      ],
+      boat: []
+    }
   },
   {
     id: 'mist',
@@ -149,6 +167,14 @@ const areas: Area[] = [
       { id: 'mist-circus', name: 'Circus' },
       { id: 'mist-obelisk', name: 'Obelisk' },
     ],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: [
+        { destination: 'New Sorpigal', days: 'Mon, Thu', cost: 15 },
+        { destination: 'Bootleg Bay', days: 'Tue, Fri', cost: 20 },
+      ]
+    }
   },
   {
     id: 'bootleg-bay',
@@ -161,6 +187,14 @@ const areas: Area[] = [
       { id: 'bb-shipwreck', name: 'Shipwreck' },
       { id: 'bb-smugglers-cove', name: 'Smuggler\'s Cove' },
     ],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: [
+        { destination: 'Mist', days: 'Tue, Fri', cost: 20 },
+        { destination: 'Free Haven', days: 'Wed, Sat', cost: 25 },
+      ]
+    }
   },
     {
     id: 'free-haven',
@@ -174,6 +208,17 @@ const areas: Area[] = [
       { id: 'fh-sewers', name: 'Sewers' },
       { id: 'fh-temple', name: 'Temple' },
     ],
+    travel: {
+      byFoot: ['Castle Ironfist', 'Silver Cove'],
+      coach: [
+        { destination: 'New Sorpigal', days: 'Mon, Wed, Fri', cost: 20 },
+        { destination: 'Castle Ironfist', days: 'Tue, Thu, Sat', cost: 10 },
+        { destination: 'Silver Cove', days: 'Mon, Thu', cost: 15 },
+      ],
+      boat: [
+        { destination: 'Bootleg Bay', days: 'Wed, Sat', cost: 25 },
+      ]
+    }
   },
   {
     id: 'silver-cove',
@@ -186,6 +231,13 @@ const areas: Area[] = [
       { id: 'sc-monolith', name: 'Monolith' },
       { id: 'sc-witches-lair', name: 'Witches Lair' },
     ],
+    travel: {
+      byFoot: ['Free Haven'],
+      coach: [
+        { destination: 'Free Haven', days: 'Mon, Thu', cost: 15 },
+      ],
+      boat: []
+    }
   }
 ];
 
@@ -246,21 +298,18 @@ const items: Item[] = [
         name: 'Short Sword',
         type: 'Weapon',
         description: 'A basic one-handed sword.',
-        cost: 25,
     },
     {
         id: 'leather-armor',
         name: 'Leather Armor',
         type: 'Armor',
         description: 'Armor made from tanned leather.',
-        cost: 50,
     },
     {
         id: 'healing-potion',
         name: 'Healing Potion',
         type: 'Potion',
         description: 'A magical potion that restores health.',
-        cost: 30,
     },
 ];
 

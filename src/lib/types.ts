@@ -3,6 +3,12 @@ export interface GameLocation {
   name: string;
 }
 
+export interface TravelRoutes {
+  byFoot: string[];
+  coach: { destination: string; days: string; cost: number }[];
+  boat: { destination: string; days: string; cost: number }[];
+}
+
 export interface Area {
   id: string;
   slug: string;
@@ -10,6 +16,7 @@ export interface Area {
   mapImageId: string;
   locations: GameLocation[];
   dungeonIds: string[];
+  travel: TravelRoutes;
 }
 
 export interface Dungeon {
@@ -67,7 +74,6 @@ export interface Item {
     name: string;
     type: 'Weapon' | 'Armor' | 'Shield' | 'Accessory' | 'Potion' | 'Reagent';
     description: string;
-    cost: number;
 }
 
 export interface Shrine {
