@@ -47,7 +47,7 @@ export interface SkillTrainer {
 export interface Skill {
   id: string;
   name: string;
-  type: 'Magic' | 'Might' | 'General';
+  type: 'Weapon' | 'Magic' | 'Armor' | 'Misc';
   description: string;
   trainers: SkillTrainer[];
 }

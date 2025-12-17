@@ -1,5 +1,4 @@
 import { getSkills } from '@/lib/data';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { SkillsList } from '@/components/skills-list';
 
 export default async function SkillsPage() {

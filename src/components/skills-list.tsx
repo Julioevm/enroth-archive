@@ -1,57 +1,85 @@
 'use client';
 
-import type { Skill } from '@/lib/types';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
+import type { Skill, SkillTrainer } from '@/lib/types';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
-interface SkillProps {
-    skills: Skill[];
+interface SkillsListProps {
+  skills: Skill[];
 }
 
-export function SkillsList({ skills }: SkillProps) {
+type GroupedSkills = {
+  [key: string]: Skill[];
+};
+
+export function SkillsList({ skills }: SkillsListProps) {
+  const groupedSkills = skills.reduce((acc, skill) => {
+    const { type } = skill;
+    if (!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type].push(skill);
+    return acc;
+  }, {} as GroupedSkills);
+
+  const categoryOrder: (keyof GroupedSkills)[] = ['Weapon', 'Armor', 'Magic', 'Misc'];
+
+  const getTrainerInfo = (trainers: SkillTrainer[], level: 'Normal' | 'Expert' | 'Master') => {
+    const filteredTrainers = trainers.filter(t => t.level === level);
+    if (filteredTrainers.length === 0) return <span className="text-muted-foreground">None</span>;
     return (
-        <Accordion type="single" collapsible className="w-full">
-            {skills.map(skill => (
-                <AccordionItem value={skill.id} key={skill.id}>
-                    <AccordionTrigger className="text-xl font-headline hover:no-underline">
-                        <div className="flex items-center gap-4">
-                            <span>{skill.name}</span>
-                            <Badge variant={skill.type === 'Magic' ? 'default' : 'secondary'}>{skill.type}</Badge>
-                        </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-1">
-                        <p className="text-muted-foreground mb-4">{skill.description}</p>
-                        <h4 className="font-semibold mb-2">Trainers</h4>
-                        <div className="rounded-md border">
-                            <Table>
-                                <TableHeader>
-                                    <TableRow>
-                                        <TableHead>Level</TableHead>
-                                        <TableHead>Location</TableHead>
-                                        <TableHead>Requirements</TableHead>
-                                        <TableHead className="text-right">Cost</TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    {skill.trainers.map(trainer => (
-                                        <TableRow key={`${skill.id}-${trainer.level}`}>
-                                            <TableCell>
-                                                <Badge variant={trainer.level === 'Master' ? 'destructive' : trainer.level === 'Expert' ? 'outline' : 'secondary'}>
-                                                    {trainer.level}
-                                                </Badge>
-                                            </TableCell>
-                                            <TableCell>{trainer.location}</TableCell>
-                                            <TableCell>{trainer.requirements || 'None'}</TableCell>
-                                            <TableCell className="text-right">{trainer.cost > 0 ? trainer.cost.toLocaleString() : 'Free'}</TableCell>
-                                        </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
-                        </div>
-                    </AccordionContent>
-                </AccordionItem>
-            ))}
-        </Accordion>
+      <ul className="space-y-1">
+        {filteredTrainers.map((trainer, index) => (
+          <li key={index}>
+            {trainer.location}
+            {trainer.cost > 0 && <span className="text-muted-foreground text-xs block">({trainer.requirements}, {trainer.cost}g)</span>}
+          </li>
+        ))}
+      </ul>
     );
+  };
+
+  return (
+    <div className="space-y-12">
+      {categoryOrder.map(category => {
+        const categorySkills = groupedSkills[category];
+        if (!categorySkills || categorySkills.length === 0) return null;
+
+        return (
+          <Card key={category}>
+            <CardHeader>
+              <CardTitle className="font-headline text-3xl">{category}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-md border">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="w-1/4">Skill</TableHead>
+                      <TableHead className="w-1/4">Learn</TableHead>
+                      <TableHead className="w-1/4">Expert</TableHead>
+                      <TableHead className="w-1/4">Master</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {categorySkills.map(skill => (
+                      <TableRow key={skill.id}>
+                        <TableCell className="font-medium">
+                          <p className="font-semibold">{skill.name}</p>
+                          <p className="text-sm text-muted-foreground mt-1">{skill.description}</p>
+                        </TableCell>
+                        <TableCell>{getTrainerInfo(skill.trainers, 'Normal')}</TableCell>
+                        <TableCell>{getTrainerInfo(skill.trainers, 'Expert')}</TableCell>
+                        <TableCell>{getTrainerInfo(skill.trainers, 'Master')}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
 }
