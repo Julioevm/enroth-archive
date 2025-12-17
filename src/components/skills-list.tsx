@@ -1,8 +1,10 @@
 'use client';
 
 import type { Skill, SkillTrainer } from '@/lib/types';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 interface SkillsListProps {
   skills: Skill[];
@@ -40,46 +42,64 @@ export function SkillsList({ skills }: SkillsListProps) {
   };
 
   return (
-    <div className="space-y-12">
-      {categoryOrder.map(category => {
-        const categorySkills = groupedSkills[category];
-        if (!categorySkills || categorySkills.length === 0) return null;
+    <div className="space-y-8">
+      <Card className="sticky top-14 z-40">
+        <CardContent className="p-2">
+            <nav className="flex flex-wrap items-center justify-center gap-2">
+                {categoryOrder.map(category => {
+                    const categorySkills = groupedSkills[category];
+                    if (!categorySkills || categorySkills.length === 0) return null;
+                    return (
+                        <Button key={category} variant="ghost" asChild>
+                            <Link href={`#${category.toLowerCase()}`}>{category}</Link>
+                        </Button>
+                    );
+                })}
+            </nav>
+        </CardContent>
+      </Card>
 
-        return (
-          <Card key={category}>
-            <CardHeader>
-              <CardTitle className="font-headline text-3xl">{category}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="rounded-md border">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="w-1/4">Skill</TableHead>
-                      <TableHead className="w-1/4">Learn</TableHead>
-                      <TableHead className="w-1/4">Expert</TableHead>
-                      <TableHead className="w-1/4">Master</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {categorySkills.map(skill => (
-                      <TableRow key={skill.id}>
-                        <TableCell className="font-medium">
-                          <p className="font-semibold">{skill.name}</p>
-                          <p className="text-sm text-muted-foreground mt-1">{skill.description}</p>
-                        </TableCell>
-                        <TableCell>{getTrainerInfo(skill.trainers, 'Normal')}</TableCell>
-                        <TableCell>{getTrainerInfo(skill.trainers, 'Expert')}</TableCell>
-                        <TableCell>{getTrainerInfo(skill.trainers, 'Master')}</TableCell>
+      <div className="space-y-12">
+        {categoryOrder.map(category => {
+          const categorySkills = groupedSkills[category];
+          if (!categorySkills || categorySkills.length === 0) return null;
+
+          return (
+            <Card key={category} id={category.toLowerCase()}>
+              <CardHeader>
+                <CardTitle className="font-headline text-3xl">{category}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="rounded-md border">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-1/4">Skill</TableHead>
+                        <TableHead className="w-1/4">Learn</TableHead>
+                        <TableHead className="w-1/4">Expert</TableHead>
+                        <TableHead className="w-1/4">Master</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
-            </CardContent>
-          </Card>
-        );
-      })}
+                    </TableHeader>
+                    <TableBody>
+                      {categorySkills.map(skill => (
+                        <TableRow key={skill.id}>
+                          <TableCell className="font-medium">
+                            <p className="font-semibold">{skill.name}</p>
+                            <p className="text-sm text-muted-foreground mt-1">{skill.description}</p>
+                          </TableCell>
+                          <TableCell>{getTrainerInfo(skill.trainers, 'Normal')}</TableCell>
+                          <TableCell>{getTrainerInfo(skill.trainers, 'Expert')}</TableCell>
+                          <TableCell>{getTrainerInfo(skill.trainers, 'Master')}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   );
 }
