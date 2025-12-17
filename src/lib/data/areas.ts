@@ -89,7 +89,7 @@ export const areas: Area[] = [
       ]
     }
   },
-    {
+  {
     id: 'free-haven',
     slug: 'free-haven',
     name: 'Free Haven',
@@ -132,6 +132,136 @@ export const areas: Area[] = [
       coach: [
         { destination: 'Free Haven', days: 'Mon, Thu', cost: 15 },
       ],
+      boat: []
+    }
+  },
+  {
+    id: 'blackshire',
+    slug: 'blackshire',
+    name: 'Blackshire',
+    mapImageId: null,
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'dragonsand',
+    slug: 'dragonsand',
+    name: 'Dragonsand',
+    mapImageId: 'dragonsand-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'eel-infested-waters',
+    slug: 'eel-infested-waters',
+    name: 'Eel-infested Waters',
+    mapImageId: 'eel-infested-waters-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'frozen-highlands',
+    slug: 'frozen-highlands',
+    name: 'Frozen Highlands',
+    mapImageId: 'frozen-highlands-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'hermits-isle',
+    slug: 'hermits-isle',
+    name: 'Hermit\'s Isle',
+    mapImageId: 'hermits-isle-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'kriegspire',
+    slug: 'kriegspire',
+    name: 'Kriegspire',
+    mapImageId: 'kriegspire-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'mire-of-the-damned',
+    slug: 'mire-of-the-damned',
+    name: 'Mire of the Damned',
+    mapImageId: null,
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'misty-islands',
+    slug: 'misty-islands',
+    name: 'Misty Islands',
+    mapImageId: 'misty-islands-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'paradise-valley',
+    slug: 'paradise-valley',
+    name: 'Paradise Valley',
+    mapImageId: 'paradise-valley-map',
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
+      boat: []
+    }
+  },
+  {
+    id: 'sweet-water',
+    slug: 'sweet-water',
+    name: 'Sweet Water',
+    mapImageId: null,
+    dungeonIds: [],
+    locations: [],
+    travel: {
+      byFoot: [],
+      coach: [],
       boat: []
     }
   }

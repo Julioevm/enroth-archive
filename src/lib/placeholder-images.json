@@ -3,7 +3,7 @@
     {
       "id": "new-sorpigal-map",
       "description": "Map of New Sorpigal",
-      "imageUrl": "https://images.unsplash.com/photo-1720253814850-0b81a96f52ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYW50YXN5JTIwbWFwfGVufDB8fHx8MTc2NTg3NTMzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/regions/Mm6-region-newsorpigal.png",
       "imageHint": "fantasy map"
     },
     {
@@ -27,14 +27,56 @@
     {
       "id": "free-haven-map",
       "description": "Map of Free Haven",
-      "imageUrl": "https://images.unsplash.com/photo-1619468129361-605ebea04b44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NTkwNTU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/regions/Mm6-region-freehaven.png",
       "imageHint": "city map"
     },
     {
       "id": "silver-cove-map",
       "description": "Map of Silver Cove",
-      "imageUrl": "https://images.unsplash.com/photo-1691506513931-4740e203d1a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb3ZlJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/regions/Mm6-region-silvercove.png",
       "imageHint": "cove map"
+    },
+    {
+      "id": "dragonsand-map",
+      "description": "Map of Dragonsand",
+      "imageUrl": "/regions/Mm6-region-dragonsand.png",
+      "imageHint": "desert map"
+    },
+    {
+      "id": "eel-infested-waters-map",
+      "description": "Map of Eel-infested Waters",
+      "imageUrl": "/regions/Mm6-region-eelinfestedwaters.png",
+      "imageHint": "sea map"
+    },
+    {
+      "id": "frozen-highlands-map",
+      "description": "Map of Frozen Highlands",
+      "imageUrl": "/regions/Mm6-region-frozenhighlands.png",
+      "imageHint": "snow map"
+    },
+    {
+      "id": "hermits-isle-map",
+      "description": "Map of Hermit's Isle",
+      "imageUrl": "/regions/Mm6-region-hermitsisle.png",
+      "imageHint": "island map"
+    },
+    {
+      "id": "kriegspire-map",
+      "description": "Map of Kriegspire",
+      "imageUrl": "/regions/Mm6-region-kriegspire.png",
+      "imageHint": "mountain map"
+    },
+    {
+      "id": "misty-islands-map",
+      "description": "Map of Misty Islands",
+      "imageUrl": "/regions/Mm6-region-mistyislands.png",
+      "imageHint": "islands map"
+    },
+    {
+      "id": "paradise-valley-map",
+      "description": "Map of Paradise Valley",
+      "imageUrl": "/regions/Mm6-region-paradisevalley.png",
+      "imageHint": "valley map"
     },
     {
       "id": "goblinwatch-dungeon-map",

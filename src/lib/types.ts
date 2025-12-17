@@ -9,18 +9,36 @@ export interface TravelRoutes {
   boat: { destination: string; days: string; cost: number }[];
 }
 
+export type AreaSlug =
+  | 'new-sorpigal'
+  | 'castle-ironfist'
+  | 'mist'
+  | 'bootleg-bay'
+  | 'free-haven'
+  | 'silver-cove'
+  | 'blackshire'
+  | 'dragonsand'
+  | 'eel-infested-waters'
+  | 'frozen-highlands'
+  | 'hermits-isle'
+  | 'kriegspire'
+  | 'mire-of-the-damned'
+  | 'misty-islands'
+  | 'paradise-valley'
+  | 'sweet-water';
+
 export interface Area {
   id: string;
-  slug: string;
+  slug: AreaSlug;
   name: string;
-  mapImageId: string;
+  mapImageId: string | null;
   locations: GameLocation[];
   dungeonIds: string[];
   travel: TravelRoutes;
 }
 
 export interface Dungeon {
-  id:string;
+  id: string;
   slug: string;
   name: string;
   areaSlug: string;
@@ -38,10 +56,10 @@ export interface Quest {
 }
 
 export interface SkillTrainer {
-    level: 'Normal' | 'Expert' | 'Master';
-    location: string;
-    cost: number;
-    requirements?: string;
+  level: 'Normal' | 'Expert' | 'Master';
+  location: string;
+  cost: number;
+  requirements?: string;
 }
 
 export interface Skill {
@@ -53,41 +71,41 @@ export interface Skill {
 }
 
 export interface Monster {
-    id: string;
-    name: string;
-    description: string;
-    hp: number;
-    attack: string;
-    locations: string[];
+  id: string;
+  name: string;
+  description: string;
+  hp: number;
+  attack: string;
+  locations: string[];
 }
 
 export interface Spell {
-    id: string;
-    name: string;
-    school: 'Spirit' | 'Body' | 'Mind' | 'Fire' | 'Air' | 'Water' | 'Earth' | 'Light' | 'Dark';
-    description: string;
-    cost: string;
+  id: string;
+  name: string;
+  school: 'Spirit' | 'Body' | 'Mind' | 'Fire' | 'Air' | 'Water' | 'Earth' | 'Light' | 'Dark';
+  description: string;
+  cost: string;
 }
 
 export interface Item {
-    id: string;
-    name: string;
-    type: 'Weapon' | 'Armor' | 'Shield' | 'Accessory' | 'Potion' | 'Reagent';
-    description: string;
-    cost: number;
+  id: string;
+  name: string;
+  type: 'Weapon' | 'Armor' | 'Shield' | 'Accessory' | 'Potion' | 'Reagent';
+  description: string;
+  cost: number;
 }
 
 export interface Shrine {
-    id: string;
-    month: string;
-    name: string;
-    location: string;
+  id: string;
+  month: string;
+  name: string;
+  location: string;
 }
 
 export interface Potion {
-    id: string;
-    name: string;
-    color: string;
-    ingredients: string;
-    effect: string;
+  id: string;
+  name: string;
+  color: string;
+  ingredients: string;
+  effect: string;
 }

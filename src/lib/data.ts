@@ -11,50 +11,50 @@ import { spells } from './data/spells';
 
 
 // Data access functions
-export async function getSkills(): Promise<Skill[]> {
+export function getSkills(): Skill[] {
   return skills;
 }
 
-export async function getQuests(): Promise<Quest[]> {
+export function getQuests(): Quest[] {
   return quests;
 }
 
-export async function getAreas(): Promise<Area[]> {
+export function getAreas(): Area[] {
   return areas;
 }
 
-export async function getAreaBySlug(slug: string): Promise<Area | undefined> {
+export function getAreaBySlug(slug: string): Area | undefined {
   return areas.find((area) => area.slug === slug);
 }
 
-export async function getDungeons(): Promise<Dungeon[]> {
+export function getDungeons(): Dungeon[] {
   return dungeons;
 }
 
-export async function getDungeonBySlug(slug: string): Promise<Dungeon | undefined> {
-    return dungeons.find((dungeon) => dungeon.slug === slug);
+export function getDungeonBySlug(slug: string): Dungeon | undefined {
+  return dungeons.find((dungeon) => dungeon.slug === slug);
 }
 
-export async function getDungeonsByIds(ids: string[]): Promise<Dungeon[]> {
-    return dungeons.filter(d => ids.includes(d.id));
+export function getDungeonsByIds(ids: string[]): Dungeon[] {
+  return dungeons.filter(d => ids.includes(d.id));
 }
 
-export async function getMonsters(): Promise<Monster[]> {
-    return monsters;
+export function getMonsters(): Monster[] {
+  return monsters;
 }
 
-export async function getSpells(): Promise<Spell[]> {
-    return spells;
+export function getSpells(): Spell[] {
+  return spells;
 }
 
-export async function getItems(): Promise<Item[]> {
-    return items;
+export function getItems(): Item[] {
+  return items;
 }
 
-export async function getShrines(): Promise<Shrine[]> {
-    return shrines;
+export function getShrines(): Shrine[] {
+  return shrines;
 }
 
-export async function getPotions(): Promise<Potion[]> {
-    return potions;
+export function getPotions(): Potion[] {
+  return potions;
 }
