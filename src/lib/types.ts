@@ -80,7 +80,6 @@ export interface Shrine {
 export interface Potion {
     id: string;
     name: string;
-    cost: string;
     color: string;
     ingredients: string;
     effect: string;

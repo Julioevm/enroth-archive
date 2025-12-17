@@ -55,7 +55,6 @@ export default async function PotionsPage() {
                         <TableHead>Color</TableHead>
                         <TableHead>Ingredients</TableHead>
                         <TableHead>Effect</TableHead>
-                        <TableHead className="text-right">Cost</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -67,7 +66,6 @@ export default async function PotionsPage() {
                             </TableCell>
                             <TableCell>{potion.ingredients}</TableCell>
                             <TableCell>{potion.effect}</TableCell>
-                            <TableCell className="text-right">{potion.cost}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
