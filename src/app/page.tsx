@@ -11,7 +11,8 @@ export default async function Home() {
           Explore the World of Enroth
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Your comprehensive guide to the lands, quests, and secrets of Might and Magic VI. Select a region to begin your adventure.
+          Your comprehensive guide to the lands, quests, and secrets of Might
+          and Magic VI. Select a region to begin your adventure.
         </p>
       </header>
 
@@ -28,7 +29,7 @@ export default async function Home() {
           <a
             key={area.id}
             href={`/areas/${area.slug}`}
-            className="absolute rounded-full bg-blue-500 opacity-50 hover:opacity-75 transition-opacity"
+            className="absolute rounded-full bg-gray-200 opacity-30 hover:opacity-50 transition-opacity"
             style={{
               left: `${area.coordinates.left}%`,
               top: `${area.coordinates.top}%`,

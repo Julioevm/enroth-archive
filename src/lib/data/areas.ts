@@ -53,7 +53,7 @@ export const areas: Area[] = [
   {
     id: 'mist',
     slug: 'mist',
-    name: 'Mist',
+    name: 'Misty Islands',
     mapImageId: 'mist-map',
     dungeonIds: ['temple-of-baa-mist'],
     locations: [
@@ -238,20 +238,6 @@ export const areas: Area[] = [
       boat: []
     },
     coordinates: { left: 45, top: 65, width: 10, height: 10 }
-  },
-  {
-    id: 'misty-islands',
-    slug: 'misty-islands',
-    name: 'Misty Islands',
-    mapImageId: 'misty-islands-map',
-    dungeonIds: [],
-    locations: [],
-    travel: {
-      byFoot: [],
-      coach: [],
-      boat: []
-    },
-    coordinates: { left: 85, top: 45, width: 10, height: 10 }
   },
   {
     id: 'paradise-valley',
