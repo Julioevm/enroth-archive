@@ -7,13 +7,14 @@ import { Skull, Map, ScrollText } from 'lucide-react';
 import Link from 'next/link';
 
 type DungeonPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function DungeonPage({ params }: DungeonPageProps) {
-  const dungeon = await getDungeonBySlug(params.slug);
+  const { slug } = await params;
+  const dungeon = await getDungeonBySlug(slug);
 
   if (!dungeon) {
     notFound();

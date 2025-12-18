@@ -9,13 +9,14 @@ import { MapPin, Scroll, ShieldQuestion, LandPlot, Sailboat, Bus } from 'lucide-
 import { Separator } from '@/components/ui/separator';
 
 type AreaPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function AreaPage({ params }: AreaPageProps) {
-  const area = await getAreaBySlug(params.slug);
+  const { slug } = await params;
+  const area = getAreaBySlug(slug);
   if (!area) {
     notFound();
   }
