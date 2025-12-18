@@ -22,7 +22,8 @@ export const areas: Area[] = [
       boat: [
         { destination: 'Mist', days: 'Mon, Thu', cost: 15 },
       ]
-    }
+    },
+    coordinates: { left: 75, top: 70, width: 9, height: 9 }
   },
   {
     id: 'castle-ironfist',
@@ -46,7 +47,8 @@ export const areas: Area[] = [
         { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 10 },
       ],
       boat: []
-    }
+    },
+    coordinates: { left: 60, top: 60, width: 10, height: 10 }
   },
   {
     id: 'mist',
@@ -67,7 +69,8 @@ export const areas: Area[] = [
         { destination: 'New Sorpigal', days: 'Mon, Thu', cost: 15 },
         { destination: 'Bootleg Bay', days: 'Tue, Fri', cost: 20 },
       ]
-    }
+    },
+    coordinates: { left: 88, top: 46, width: 8, height: 8 }
   },
   {
     id: 'bootleg-bay',
@@ -87,7 +90,8 @@ export const areas: Area[] = [
         { destination: 'Mist', days: 'Tue, Fri', cost: 20 },
         { destination: 'Free Haven', days: 'Wed, Sat', cost: 25 },
       ]
-    }
+    },
+    coordinates: { left: 65, top: 48, width: 10, height: 10 }
   },
   {
     id: 'free-haven',
@@ -114,7 +118,8 @@ export const areas: Area[] = [
       boat: [
         { destination: 'Bootleg Bay', days: 'Wed, Sat', cost: 25 },
       ]
-    }
+    },
+    coordinates: { left: 46, top: 40, width: 12, height: 12 }
   },
   {
     id: 'silver-cove',
@@ -133,7 +138,8 @@ export const areas: Area[] = [
         { destination: 'Free Haven', days: 'Mon, Thu', cost: 15 },
       ],
       boat: []
-    }
+    },
+    coordinates: { left: 75, top: 22, width: 10, height: 10 }
   },
   {
     id: 'blackshire',
@@ -146,7 +152,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 25, top: 28, width: 10, height: 10 }
   },
   {
     id: 'dragonsand',
@@ -159,7 +166,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 25, top: 55, width: 10, height: 10 }
   },
   {
     id: 'eel-infested-waters',
@@ -172,7 +180,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 85, top: 5, width: 10, height: 10 }
   },
   {
     id: 'frozen-highlands',
@@ -185,7 +194,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 45, top: 5, width: 10, height: 10 }
   },
   {
     id: 'hermits-isle',
@@ -198,7 +208,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 5, top: 65, width: 10, height: 10 }
   },
   {
     id: 'kriegspire',
@@ -211,7 +222,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 25, top: 5, width: 10, height: 10 }
   },
   {
     id: 'mire-of-the-damned',
@@ -224,7 +236,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 45, top: 65, width: 10, height: 10 }
   },
   {
     id: 'misty-islands',
@@ -237,7 +250,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 85, top: 45, width: 10, height: 10 }
   },
   {
     id: 'paradise-valley',
@@ -250,7 +264,8 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 5, top: 25, width: 10, height: 10 }
   },
   {
     id: 'sweet-water',
@@ -263,6 +278,7 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: []
-    }
+    },
+    coordinates: { left: 5, top: 5, width: 10, height: 10 }
   }
 ];

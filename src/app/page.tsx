@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { getAreas } from '@/lib/data';
-import { areaCoordinates } from '@/lib/data/map_coordinates';
 
 export default async function Home() {
   const areas = await getAreas();
@@ -29,12 +28,12 @@ export default async function Home() {
           <a
             key={area.id}
             href={`/areas/${area.slug}`}
-            className="absolute rounded-full bg-blue-500 opacity-50 hover:opacity-75"
+            className="absolute rounded-full bg-blue-500 opacity-50 hover:opacity-75 transition-opacity"
             style={{
-              left: `${areaCoordinates[area.slug]?.left || 0}%`,
-              top: `${areaCoordinates[area.slug]?.top || 0}%`,
-              width: `${areaCoordinates[area.slug]?.width || 0}%`,
-              height: `${areaCoordinates[area.slug]?.height || 0}%`,
+              left: `${area.coordinates.left}%`,
+              top: `${area.coordinates.top}%`,
+              width: `${area.coordinates.width}%`,
+              height: `${area.coordinates.height}%`,
             }}
           >
             <span className="sr-only">{area.name}</span>

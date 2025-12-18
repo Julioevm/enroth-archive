@@ -20,7 +20,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
     notFound();
   }
 
-  const areaImage = getPlaceholderImage(area.mapImageId);
+  const areaImage = getPlaceholderImage(area.mapImageId || 'fallback');
   const dungeons = await getDungeonsByIds(area.dungeonIds);
 
   return (

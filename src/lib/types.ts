@@ -35,6 +35,12 @@ export interface Area {
   locations: GameLocation[];
   dungeonIds: string[];
   travel: TravelRoutes;
+  coordinates: {
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+  };
 }
 
 export interface Dungeon {
