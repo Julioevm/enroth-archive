@@ -22,8 +22,7 @@ export default async function Home() {
           alt="Map of Enroth"
           width={1400}
           height={900}
-          layout="responsive"
-          objectFit="contain"
+          priority
         />
         {areas.map((area) => (
           <a
