@@ -24,21 +24,21 @@ const worldMapGrid: (AreaSlug | null)[][] = [
 
 const regionImages: Record<string, string> = {
   'new-sorpigal': '/regions/Mm6-region-newsorpigal.png',
-  'castle-ironfist': '/regions/Castle_Ironfist_Markers.png',
+  'castle-ironfist': '/regions/Mm6-region-castleironfist.png',
   mist: '/regions/Mm6-region-mistyislands.png',
-  'bootleg-bay': '/regions/Bootleg_Bay_Markers.png',
+  'bootleg-bay': '/regions/Mm6-region-bootleg-bay.png',
   'free-haven': '/regions/Mm6-region-freehaven.png',
   'silver-cove': '/regions/Mm6-region-silvercove.png',
-  blackshire: '/regions/Blackshire_Markers.png',
+  blackshire: '/regions/Mm6-region-blackshire.png',
   dragonsand: '/regions/Mm6-region-dragonsand.png',
   'eel-infested-waters': '/regions/Mm6-region-eelinfestedwaters.png',
   'frozen-highlands': '/regions/Mm6-region-frozenhighlands.png',
   'hermits-isle': '/regions/Mm6-region-hermitsisle.png',
   kriegspire: '/regions/Mm6-region-kriegspire.png',
-  'mire-of-the-damned': '/regions/Mire_of_the_Damned_Markers.png',
+  'mire-of-the-damned': '/regions/Mm6-region-mireofthedamned.png',
   'misty-islands': '/regions/Mm6-region-mistyislands.png',
   'paradise-valley': '/regions/Mm6-region-paradisevalley.png',
-  'sweet-water': '/regions/Sweet_Water_Markers.png',
+  'sweet-water': '/regions/Mm6-region-sweet-water.png',
 };
 
 export default async function WorldPage() {
@@ -72,7 +72,7 @@ export default async function WorldPage() {
               );
             }
             const area = areasBySlug.get(slug)!;
-            const imageUrl = regionImages[slug] || '/map_enroth.png'; // Fallback to world map if specific region image missing
+            const imageUrl = regionImages[slug];
 
             return (
               <Link
@@ -83,7 +83,9 @@ export default async function WorldPage() {
                 <Image
                   src={imageUrl}
                   alt={`Map of ${area.name}`}
-                  fill
+                  width={256}
+                  height={256}
+                  priority
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
