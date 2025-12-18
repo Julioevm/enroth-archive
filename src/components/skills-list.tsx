@@ -42,29 +42,34 @@ export function SkillsList({ skills, areas }: SkillsListProps) {
     if (filteredTrainers.length === 0)
       return <span className="text-muted-foreground">None</span>;
     return (
-      <ul className="space-y-1">
+      <ul className="space-y-3">
         {filteredTrainers.map((trainer, index) => {
           const area = areas.find((a) => a.name === trainer.location);
           return (
-            <li key={index}>
+            <li key={index} className="flex flex-col">
+              <span className="font-medium text-sm leading-tight mb-1">
+                {trainer.name}
+              </span>
               {area ? (
                 <Link
                   href={`/areas/${area.slug}`}
-                  className="text-base hover:underline"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {trainer.location}
                 </Link>
               ) : (
-                trainer.location
-              )}
-              {trainer.cost > 0 && (
-                <span className="text-muted-foreground text-xs block">
-                  ({trainer.requirements}, {trainer.cost}g)
+                <span className="text-xs text-muted-foreground">
+                  {trainer.location}
                 </span>
               )}
-              {trainer.requirements && trainer.cost === 0 && (
-                <span className="text-muted-foreground text-xs block">
-                  ({trainer.requirements})
+              {(trainer.requirements || trainer.cost > 0) && (
+                <span className="text-muted-foreground text-[10px] leading-tight mt-1 italic">
+                  {[
+                    trainer.requirements,
+                    trainer.cost > 0 ? `${trainer.cost}g` : null,
+                  ]
+                    .filter(Boolean)
+                    .join(', ')}
                 </span>
               )}
             </li>

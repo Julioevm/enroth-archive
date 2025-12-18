@@ -65,11 +65,13 @@ export interface Quest {
 }
 
 export interface SkillTrainer {
+  name: string;
   level: 'Normal' | 'Expert' | 'Master';
   location: string;
   cost: number;
   requirements?: string;
 }
+
 
 export interface Skill {
   id: string;
