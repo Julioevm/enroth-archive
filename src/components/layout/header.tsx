@@ -1,10 +1,10 @@
 'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, Swords } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { ThemeToggle } from "@/components/theme-toggle";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu, Swords } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme-toggle';
 import {
   Sheet,
   SheetContent,
@@ -12,8 +12,8 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetClose,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -35,9 +35,11 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Swords className="h-6 w-6 text-primary" />
-          <span className="font-headline font-bold text-lg">Enroth Archive</span>
+          <span className="font-headline font-bold text-lg">
+            Enroth Archives
+          </span>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden flex-1 items-center gap-6 text-sm md:flex">
           {navItems.map((item) => (
@@ -45,8 +47,10 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               className={cn(
-                "transition-colors hover:text-foreground/80",
-                pathname === item.href ? "text-foreground" : "text-foreground/60"
+                'transition-colors hover:text-foreground/80',
+                pathname === item.href
+                  ? 'text-foreground'
+                  : 'text-foreground/60'
               )}
             >
               {item.name}
@@ -55,7 +59,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-           {/* Mobile Navigation */}
+          {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -67,23 +71,27 @@ export function SiteHeader() {
               <SheetHeader>
                 <SheetTitle className="sr-only">Main Menu</SheetTitle>
               </SheetHeader>
-               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
+              <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
                 <Swords className="h-6 w-6 text-primary" />
-                <span className="font-headline font-bold text-lg">Enroth Archive</span>
+                <span className="font-headline font-bold text-lg">
+                  Enroth Archives
+                </span>
               </Link>
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
-                   <SheetClose asChild key={item.href}>
-                      <Link
-                        href={item.href}
-                        className={cn(
-                          "text-lg font-medium transition-colors hover:text-primary",
-                          pathname === item.href ? "text-primary" : "text-muted-foreground"
-                        )}
-                      >
-                        {item.name}
-                      </Link>
-                   </SheetClose>
+                  <SheetClose asChild key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        'text-lg font-medium transition-colors hover:text-primary',
+                        pathname === item.href
+                          ? 'text-primary'
+                          : 'text-muted-foreground'
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  </SheetClose>
                 ))}
               </nav>
             </SheetContent>

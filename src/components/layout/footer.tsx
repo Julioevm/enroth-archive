@@ -6,7 +6,7 @@ export function SiteFooter() {
           Built by fans, for fans. Not affiliated with Ubisoft.
         </p>
         <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
-          © {new Date().getFullYear()} Enroth Archive. All rights reserved.
+          © {new Date().getFullYear()} Enroth Archives. All rights reserved.
         </p>
       </div>
     </footer>

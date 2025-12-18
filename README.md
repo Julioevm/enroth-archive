@@ -1,6 +1,6 @@
-# Enroth Archive
+# Enroth Archives
 
-Welcome to the Enroth Archive, a modern, fan-made wiki for the classic role-playing game, *Might and Magic VI: The Mandate of Heaven*. This web application provides a comprehensive and easy-to-navigate resource for exploring the world of Enroth.
+Welcome to the Enroth Archives, a modern, fan-made wiki for the classic role-playing game, *Might and Magic VI: The Mandate of Heaven*. This web application provides a comprehensive and easy-to-navigate resource for exploring the world of Enroth.
 
 This project was built using **Firebase Studio**.
 
