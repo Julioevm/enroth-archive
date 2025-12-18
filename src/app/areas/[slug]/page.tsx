@@ -1,4 +1,4 @@
-import { getAreaBySlug, getDungeonsByIds } from '@/lib/data';
+import { getAreaBySlug, getDungeonsByIds, getAreas } from '@/lib/data';
 import { getPlaceholderImage } from '@/lib/images';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -30,6 +30,22 @@ export default async function AreaPage({ params }: AreaPageProps) {
 
   const areaImage = getPlaceholderImage(area.mapImageId || 'fallback');
   const dungeons = getDungeonsByIds(area.dungeonIds);
+  const allAreas = getAreas();
+
+  const getDestinationLink = (name: string) => {
+    const target = allAreas.find((a) => a.name === name);
+    if (target) {
+      return (
+        <Link
+          href={`/areas/${target.slug}`}
+          className="hover:text-primary transition-colors"
+        >
+          {name}
+        </Link>
+      );
+    }
+    return name;
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -92,7 +108,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
                 <ul className="list-disc list-inside text-muted-foreground">
                   {area.travel.byFoot.map((route) => (
                     <li key={route.destination}>
-                      {route.destination} ({route.direction})
+                      {getDestinationLink(route.destination)} ({route.direction})
                     </li>
                   ))}
                 </ul>
@@ -109,7 +125,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     {area.travel.coach.map((route) => (
                       <li key={route.destination}>
-                        {route.destination} ({route.days}) - {route.cost}g
+                        {getDestinationLink(route.destination)} ({route.days}) - {route.cost}g
                       </li>
                     ))}
                   </ul>
@@ -124,7 +140,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     {area.travel.boat.map((route) => (
                       <li key={route.destination}>
-                        {route.destination} ({route.days}) - {route.cost}g
+                        {getDestinationLink(route.destination)} ({route.days}) - {route.cost}g
                       </li>
                     ))}
                   </ul>

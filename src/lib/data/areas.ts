@@ -21,7 +21,7 @@ export const areas: Area[] = [
         { destination: 'Free Haven', days: 'Tue, Thu, Sat', cost: 20 },
       ],
       boat: [
-        { destination: 'Mist', days: 'Mon, Thu', cost: 15 },
+        { destination: 'Misty Islands', days: 'Mon, Thu', cost: 15 },
       ]
     },
     coordinates: { left: 75, top: 70, width: 9, height: 9 }
@@ -91,7 +91,7 @@ export const areas: Area[] = [
       byFoot: [],
       coach: [],
       boat: [
-        { destination: 'Mist', days: 'Tue, Fri', cost: 20 },
+        { destination: 'Misty Islands', days: 'Tue, Fri', cost: 20 },
         { destination: 'Free Haven', days: 'Wed, Sat', cost: 25 },
       ]
     },
