@@ -60,9 +60,14 @@ export interface Quest {
   id: string;
   name: string;
   description: string;
+  mission: string;
+  solution: string;
+  reward: string;
+  award: string;
   areaSlug: string;
   locationName?: string;
 }
+
 
 export interface SkillTrainer {
   name: string;
