@@ -1,5 +1,4 @@
 import { getDungeonBySlug } from '@/lib/data';
-import { getPlaceholderImage } from '@/lib/images';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,8 +18,6 @@ export default async function DungeonPage({ params }: DungeonPageProps) {
   if (!dungeon) {
     notFound();
   }
-
-  const dungeonImage = getPlaceholderImage(dungeon.mapImageId);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -43,11 +40,10 @@ export default async function DungeonPage({ params }: DungeonPageProps) {
             <CardContent className="p-0">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-b-lg">
                 <Image
-                  src={dungeonImage.imageUrl}
-                  alt={`Map of ${dungeon.name}`}
+                  src={dungeon.mapImageUrl}
+                  alt={dungeon.mapImageDescription}
                   fill
                   className="object-contain"
-                  data-ai-hint={dungeonImage.imageHint}
                 />
               </div>
             </CardContent>

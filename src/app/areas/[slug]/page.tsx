@@ -1,5 +1,4 @@
 import { getAreaBySlug, getDungeonsByIds, getAreas } from '@/lib/data';
-import { getPlaceholderImage } from '@/lib/images';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -28,7 +27,6 @@ export default async function AreaPage({ params }: AreaPageProps) {
     notFound();
   }
 
-  const areaImage = getPlaceholderImage(area.mapImageId || 'fallback');
   const dungeons = getDungeonsByIds(area.dungeonIds);
   const allAreas = getAreas();
 
@@ -64,11 +62,10 @@ export default async function AreaPage({ params }: AreaPageProps) {
             <CardContent className="p-0">
               <div className="relative aspect-[4/4] w-full overflow-hidden rounded-t-lg">
                 <Image
-                  src={areaImage.imageUrl}
-                  alt={`Map of ${area.name}`}
+                  src={area.mapImageUrl}
+                  alt={area.mapImageDescription}
                   fill
                   className="object-cover"
-                  data-ai-hint={areaImage.imageHint}
                   priority
                 />
               </div>

@@ -32,7 +32,8 @@ export interface Area {
   slug: AreaSlug;
   name: string;
   headline: string;
-  mapImageId: string | null;
+  mapImageUrl: string;
+  mapImageDescription: string;
   locations: GameLocation[];
   dungeonIds: string[];
   travel: TravelRoutes;
@@ -49,7 +50,8 @@ export interface Dungeon {
   slug: string;
   name: string;
   areaSlug: string;
-  mapImageId: string;
+  mapImageUrl: string;
+  mapImageDescription: string;
   description: string;
   monsters: string[];
 }
