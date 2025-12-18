@@ -1,8 +1,9 @@
-import { getSkills } from '@/lib/data';
+import { getSkills, getAreas } from '@/lib/data';
 import { SkillsList } from '@/components/skills-list';
 
 export default async function SkillsPage() {
   const skills = await getSkills();
+  const areas = await getAreas();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -15,7 +16,8 @@ export default async function SkillsPage() {
         </p>
       </header>
 
-      <SkillsList skills={skills} />
+      <SkillsList skills={skills} areas={areas} />
     </div>
   );
 }
+
