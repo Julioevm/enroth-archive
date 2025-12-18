@@ -3,80 +3,98 @@
     {
       "id": "new-sorpigal-map",
       "description": "Map of New Sorpigal",
-      "imageUrl": "/regions/Mm6-region-newsorpigal.png",
+      "imageUrl": "/regions/Mm6-region-newsorpigal-markers.png",
       "imageHint": "fantasy map"
     },
     {
       "id": "castle-ironfist-map",
       "description": "Map of Castle Ironfist",
-      "imageUrl": "https://images.unsplash.com/photo-1654594809787-8bb951f25c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXN0bGUlMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/areas/Castle_Ironfist_Markers.png",
       "imageHint": "castle map"
     },
     {
       "id": "mist-map",
       "description": "Map of Mist",
-      "imageUrl": "https://images.unsplash.com/photo-1704495349692-bfa4d214a508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aXNsYW5kJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/areas/Misty_Islands_Markers.png",
       "imageHint": "island map"
     },
     {
       "id": "bootleg-bay-map",
       "description": "Map of Bootleg Bay",
-      "imageUrl": "https://images.unsplash.com/photo-1738502602077-0738750b1f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiYXklMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/areas/Bootleg_Bay_Markers.png",
       "imageHint": "bay map"
     },
     {
       "id": "free-haven-map",
       "description": "Map of Free Haven",
-      "imageUrl": "/regions/Mm6-region-freehaven.png",
+      "imageUrl": "/areas/Free_Haven_Markers.png",
       "imageHint": "city map"
     },
     {
       "id": "silver-cove-map",
       "description": "Map of Silver Cove",
-      "imageUrl": "/regions/Mm6-region-silvercove.png",
+      "imageUrl": "/areas/Silver_Cove_Markers.png",
       "imageHint": "cove map"
+    },
+    {
+      "id": "blackshire-map",
+      "description": "Map of Blackshire",
+      "imageUrl": "/areas/Blackshire_Markers.png",
+      "imageHint": "town map"
     },
     {
       "id": "dragonsand-map",
       "description": "Map of Dragonsand",
-      "imageUrl": "/regions/Mm6-region-dragonsand.png",
+      "imageUrl": "/areas/Dragonsand_Markers.png",
       "imageHint": "desert map"
     },
     {
       "id": "eel-infested-waters-map",
       "description": "Map of Eel-infested Waters",
-      "imageUrl": "/regions/Mm6-region-eelinfestedwaters.png",
+      "imageUrl": "/areas/Eel_Infested_Waters_Markers.png",
       "imageHint": "sea map"
     },
     {
       "id": "frozen-highlands-map",
       "description": "Map of Frozen Highlands",
-      "imageUrl": "/regions/Mm6-region-frozenhighlands.png",
+      "imageUrl": "/areas/Frozen_Highlands_Markers.png",
       "imageHint": "snow map"
     },
     {
       "id": "hermits-isle-map",
       "description": "Map of Hermit's Isle",
-      "imageUrl": "/regions/Mm6-region-hermitsisle.png",
+      "imageUrl": "/areas/Hermits_Isle_Markers.png",
       "imageHint": "island map"
     },
     {
       "id": "kriegspire-map",
       "description": "Map of Kriegspire",
-      "imageUrl": "/regions/Mm6-region-kriegspire.png",
+      "imageUrl": "/areas/Kriegspire_Markers.png",
       "imageHint": "mountain map"
+    },
+    {
+      "id": "mire-of-the-damned-map",
+      "description": "Map of Mire of the Damned",
+      "imageUrl": "/areas/Mire_of_the_Damned_Markers.png",
+      "imageHint": "swamp map"
     },
     {
       "id": "misty-islands-map",
       "description": "Map of Misty Islands",
-      "imageUrl": "/regions/Mm6-region-mistyislands.png",
+      "imageUrl": "/areas/Misty_Islands_Markers.png",
       "imageHint": "islands map"
     },
     {
       "id": "paradise-valley-map",
       "description": "Map of Paradise Valley",
-      "imageUrl": "/regions/Mm6-region-paradisevalley.png",
+      "imageUrl": "/areas/Paradise_Valley_Markers.png",
       "imageHint": "valley map"
+    },
+    {
+      "id": "sweet-water-map",
+      "description": "Map of Sweet Water",
+      "imageUrl": "/areas/Sweet_Water_Markers.png",
+      "imageHint": "wasteland map"
     },
     {
       "id": "goblinwatch-dungeon-map",

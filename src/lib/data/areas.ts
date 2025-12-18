@@ -145,7 +145,7 @@ export const areas: Area[] = [
     id: 'blackshire',
     slug: 'blackshire',
     name: 'Blackshire',
-    mapImageId: null,
+    mapImageId: 'blackshire-map',
     dungeonIds: [],
     locations: [],
     travel: {
@@ -229,7 +229,7 @@ export const areas: Area[] = [
     id: 'mire-of-the-damned',
     slug: 'mire-of-the-damned',
     name: 'Mire of the Damned',
-    mapImageId: null,
+    mapImageId: 'mire-of-the-damned-map',
     dungeonIds: [],
     locations: [],
     travel: {
@@ -257,7 +257,7 @@ export const areas: Area[] = [
     id: 'sweet-water',
     slug: 'sweet-water',
     name: 'Sweet Water',
-    mapImageId: null,
+    mapImageId: 'sweet-water-map',
     dungeonIds: [],
     locations: [],
     travel: {
