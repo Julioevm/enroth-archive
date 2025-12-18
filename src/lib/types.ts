@@ -31,6 +31,7 @@ export interface Area {
   id: string;
   slug: AreaSlug;
   name: string;
+  headline: string;
   mapImageId: string | null;
   locations: GameLocation[];
   dungeonIds: string[];

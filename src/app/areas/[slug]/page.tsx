@@ -22,7 +22,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
   }
 
   const areaImage = getPlaceholderImage(area.mapImageId || 'fallback');
-  const dungeons = await getDungeonsByIds(area.dungeonIds);
+  const dungeons = getDungeonsByIds(area.dungeonIds);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -30,7 +30,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
         <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-2">
           {area.name}
         </h1>
-        <p className="text-lg text-muted-foreground">Regional Details and Points of Interest</p>
+        <p className="text-lg text-muted-foreground italic">"{area.headline}"</p>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

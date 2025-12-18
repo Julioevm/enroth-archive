@@ -14,7 +14,7 @@ type DungeonPageProps = {
 
 export default async function DungeonPage({ params }: DungeonPageProps) {
   const { slug } = await params;
-  const dungeon = await getDungeonBySlug(slug);
+  const dungeon = getDungeonBySlug(slug);
 
   if (!dungeon) {
     notFound();
