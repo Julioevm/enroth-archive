@@ -81,9 +81,16 @@ export default async function AreaPage({ params }: AreaPageProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
-                  {area.details}
-                </p>
+                {/* As a temporal workaround I'm simply loading the HTML from the data object.
+                  This is to avoid having to store a complex structure for the numbered lists. */}
+                <div
+                  className="text-base text-foreground leading-relaxed 
+                    [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:mb-4 
+                    [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:mb-4 
+                    [&_li]:mb-1 
+                    [&_a]:text-primary [&_a]:hover:underline transition-colors"
+                  dangerouslySetInnerHTML={{ __html: area.details }}
+                />
               </CardContent>
             </Card>
           )}

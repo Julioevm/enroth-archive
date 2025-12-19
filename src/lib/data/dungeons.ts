@@ -17,13 +17,25 @@ export const dungeons: Dungeon[] = [
     id: 'abandoned-temple',
     slug: 'abandoned-temple',
     name: 'Abandoned Temple',
-    areaSlug: 'castle-ironfist',
+    areaSlug: 'new-sorpigal',
     mapImageUrl:
       'https://images.unsplash.com/photo-1747071766407-a8d72a802a10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZW1wbGUlMjBtYXB8ZW58MHx8fHwxNzY1OTY3OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     mapImageDescription: 'Map of Abandoned Temple',
     description:
-      'A desecrated temple, now a den for fanatics of Baa. Eerie chants echo through its halls.',
-    monsters: ['Acolyte of Baa', 'Bat'],
+      'A desecrated temple, now home to giant spiders and cobras. Eerie chants echo through its halls.',
+    monsters: ['Giant Spider', 'Cobra', 'Acolyte of Baa'],
+  },
+  {
+    id: 'ghariks-forge',
+    slug: 'ghariks-forge',
+    name: "Gharik's Forge",
+    areaSlug: 'new-sorpigal',
+    mapImageUrl:
+      'https://images.unsplash.com/photo-1570309977742-90c800236330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkdW5nZW9uJTIwbWFwfGVufDB8fHx8MTc2NTk2NzkzMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    mapImageDescription: "Map of Gharik's Forge",
+    description:
+      'The legendary laboratory of the sorcerer Gharik, hidden on a remote island. It is said to contain advanced mechanical traps and powerful artifacts.',
+    monsters: ['Fire Elemental', 'Sorcerer', 'Golem'],
   },
   {
     id: 'shadow-guild-hideout',
