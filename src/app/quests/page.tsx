@@ -8,10 +8,15 @@ import {
 } from '@/components/ui/card';
 import { QuestsTable } from '@/components/quests-table';
 
-export default async function QuestsPage() {
+export default async function QuestsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ area?: string | string[] }>;
+}) {
+  const params = await searchParams;
+  const area = typeof params.area === 'string' ? params.area : undefined;
   const quests = await getQuests();
   const areas = await getAreas();
-  const areaNames = areas.map((area) => area.name);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -33,7 +38,12 @@ export default async function QuestsPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <QuestsTable quests={quests} areas={areas} />
+          <QuestsTable
+            key={area || 'all'}
+            quests={quests}
+            areas={areas}
+            initialArea={area}
+          />
         </CardContent>
       </Card>
     </div>

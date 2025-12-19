@@ -28,12 +28,14 @@ type SortKey = keyof Quest;
 export function QuestsTable({
   quests,
   areas,
+  initialArea = 'all',
 }: {
   quests: Quest[];
   areas: Area[];
+  initialArea?: string;
 }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [areaFilter, setAreaFilter] = useState('all');
+  const [areaFilter, setAreaFilter] = useState(initialArea);
   const [sortConfig, setSortConfig] = useState<{
     key: SortKey;
     direction: 'ascending' | 'descending';

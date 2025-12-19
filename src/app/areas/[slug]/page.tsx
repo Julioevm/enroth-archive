@@ -204,10 +204,16 @@ export default async function AreaPage({ params }: AreaPageProps) {
                 Related Quests
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-2">
+              <Link
+                href={`/quests?area=${area.slug}`}
+                className="block text-base text-muted-foreground hover:text-primary transition-colors"
+              >
+                View quests in {area.name}
+              </Link>
               <Link
                 href="/quests"
-                className="text-base text-muted-foreground hover:text-primary transition-colors"
+                className="block text-sm text-muted-foreground/60 hover:text-primary transition-colors"
               >
                 View all available quests
               </Link>
