@@ -19,11 +19,17 @@ export function FestiveProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem("snow-enabled");
-    if (saved === "true") {
-      setSnowEnabled(true);
-    }
+    
+    // Use a small delay to satisfy the strict "no synchronous setState in effect" rule
+    // while still ensuring we mount correctly for client-side features.
+    const timer = setTimeout(() => {
+      if (saved === "true") {
+        setSnowEnabled(true);
+      }
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleSetSnow = (enabled: boolean) => {

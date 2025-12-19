@@ -52,7 +52,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
           {area.name}
         </h1>
         <p className="text-lg text-muted-foreground italic">
-          "{area.headline}"
+          &ldquo;{area.headline}&rdquo;
         </p>
       </header>
 
