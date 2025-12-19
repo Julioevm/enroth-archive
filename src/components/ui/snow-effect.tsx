@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef } from "react";
-import { useFestive } from "@/components/festive-provider";
+import React, { useEffect, useRef } from 'react';
+import { useFestive } from '@/components/festive-provider';
 
 interface Snowflake {
   x: number;
@@ -21,7 +21,7 @@ export function SnowEffect() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     let animationFrameId: number;
@@ -46,7 +46,7 @@ export function SnowEffect() {
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
       ctx.beginPath();
 
       snowflakes.forEach((snowflake) => {
@@ -71,12 +71,12 @@ export function SnowEffect() {
       animationFrameId = requestAnimationFrame(draw);
     };
 
-    window.addEventListener("resize", resize);
+    window.addEventListener('resize', resize);
     resize();
     draw();
 
     return () => {
-      window.removeEventListener("resize", resize);
+      window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationFrameId);
     };
   }, [snowEnabled]);
@@ -87,7 +87,7 @@ export function SnowEffect() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-[9999]"
-      style={{ mixBlendMode: "lighten" }}
+      style={{ mixBlendMode: 'lighten' }}
     />
   );
 }

@@ -1,7 +1,13 @@
 import { getDungeonBySlug } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Skull, Map, ScrollText } from 'lucide-react';
 import Link from 'next/link';
 
@@ -26,16 +32,25 @@ export default async function DungeonPage({ params }: DungeonPageProps) {
           {dungeon.name}
         </h1>
         <CardDescription className="text-lg">
-          Located in <Link href={`/areas/${dungeon.areaSlug}`} className="text-primary hover:underline">{dungeon.areaSlug.replace('-', ' ')}</Link>.
+          Located in{' '}
+          <Link
+            href={`/areas/${dungeon.areaSlug}`}
+            className="text-primary hover:underline"
+          >
+            {dungeon.areaSlug.replace('-', ' ')}
+          </Link>
+          .
         </CardDescription>
       </header>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <Card>
             <CardHeader className="flex flex-row items-center gap-2">
               <Map className="w-5 h-5 text-primary" />
-              <CardTitle className="font-headline text-2xl">Dungeon Map</CardTitle>
+              <CardTitle className="font-headline text-2xl">
+                Dungeon Map
+              </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-b-lg">
@@ -49,31 +64,33 @@ export default async function DungeonPage({ params }: DungeonPageProps) {
             </CardContent>
           </Card>
         </div>
-        
-        <div className="space-y-8">
-            <Card>
-                <CardHeader className="flex flex-row items-center gap-2">
-                    <ScrollText className="w-5 h-5 text-primary" />
-                    <CardTitle className="font-headline text-2xl">Description</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground">{dungeon.description}</p>
-                </CardContent>
-            </Card>
 
-            <Card>
-                <CardHeader className="flex flex-row items-center gap-2">
-                    <Skull className="w-5 h-5 text-primary" />
-                    <CardTitle className="font-headline text-2xl">Monsters</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                        {dungeon.monsters.map((monster, index) => (
-                            <li key={index}>{monster}</li>
-                        ))}
-                    </ul>
-                </CardContent>
-            </Card>
+        <div className="space-y-8">
+          <Card>
+            <CardHeader className="flex flex-row items-center gap-2">
+              <ScrollText className="w-5 h-5 text-primary" />
+              <CardTitle className="font-headline text-2xl">
+                Description
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{dungeon.description}</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center gap-2">
+              <Skull className="w-5 h-5 text-primary" />
+              <CardTitle className="font-headline text-2xl">Monsters</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                {dungeon.monsters.map((monster, index) => (
+                  <li key={index}>{monster}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

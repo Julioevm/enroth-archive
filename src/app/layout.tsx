@@ -9,7 +9,6 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { FestiveProvider } from '@/components/festive-provider';
 import { SnowEffect } from '@/components/ui/snow-effect';
 
-
 const fontBody = Spectral({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -68,7 +67,6 @@ export default function RootLayout({
           </FestiveProvider>
           <Toaster />
         </ThemeProvider>
-
       </body>
     </html>
   );

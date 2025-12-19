@@ -4,7 +4,7 @@ export interface GameLocation {
 }
 
 export interface TravelRoutes {
-  byFoot: { destination: string; direction: string; }[];
+  byFoot: { destination: string; direction: string }[];
   coach: { destination: string; days: string; cost: number }[];
   boat: { destination: string; days: string; cost: number }[];
 }
@@ -68,7 +68,6 @@ export interface Quest {
   locationName?: string;
 }
 
-
 export interface SkillTrainer {
   name: string;
   level: 'Normal' | 'Expert' | 'Master';
@@ -76,7 +75,6 @@ export interface SkillTrainer {
   cost: number;
   requirements?: string;
 }
-
 
 export interface Skill {
   id: string;
@@ -98,7 +96,16 @@ export interface Monster {
 export interface Spell {
   id: string;
   name: string;
-  school: 'Spirit' | 'Body' | 'Mind' | 'Fire' | 'Air' | 'Water' | 'Earth' | 'Light' | 'Dark';
+  school:
+    | 'Spirit'
+    | 'Body'
+    | 'Mind'
+    | 'Fire'
+    | 'Air'
+    | 'Water'
+    | 'Earth'
+    | 'Light'
+    | 'Dark';
   description: string;
   cost: string;
 }

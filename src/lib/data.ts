@@ -1,4 +1,14 @@
-import type { Area, Dungeon, Quest, Skill, Monster, Spell, Item, Shrine, Potion } from './types';
+import type {
+  Area,
+  Dungeon,
+  Quest,
+  Skill,
+  Monster,
+  Spell,
+  Item,
+  Shrine,
+  Potion,
+} from './types';
 import { areas } from './data/areas';
 import { dungeons } from './data/dungeons';
 import { items } from './data/items';
@@ -8,7 +18,6 @@ import { quests } from './data/quests';
 import { shrines } from './data/shrines';
 import { skills } from './data/skills';
 import { spells } from './data/spells';
-
 
 // Data access functions
 export function getSkills(): Skill[] {
@@ -36,7 +45,7 @@ export function getDungeonBySlug(slug: string): Dungeon | undefined {
 }
 
 export function getDungeonsByIds(ids: string[]): Dungeon[] {
-  return dungeons.filter(d => ids.includes(d.id));
+  return dungeons.filter((d) => ids.includes(d.id));
 }
 
 export function getMonsters(): Monster[] {

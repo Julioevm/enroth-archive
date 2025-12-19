@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Github, TreePine } from "lucide-react";
-import { useFestive } from "@/components/festive-provider";
-import { isChristmasSeason, cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Github, TreePine } from 'lucide-react';
+import { useFestive } from '@/components/festive-provider';
+import { isChristmasSeason, cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 export function SiteFooter() {
   const { snowEnabled, setSnowEnabled } = useFestive();
@@ -33,10 +33,12 @@ export function SiteFooter() {
               size="icon"
               onClick={() => setSnowEnabled(!snowEnabled)}
               className={cn(
-                "h-8 w-8 transition-all hover:bg-transparent",
-                snowEnabled ? "text-green-600 drop-shadow-[0_0_8px_rgba(22,163,74,0.5)]" : "text-muted-foreground"
+                'h-8 w-8 transition-all hover:bg-transparent',
+                snowEnabled
+                  ? 'text-green-600 drop-shadow-[0_0_8px_rgba(22,163,74,0.5)]'
+                  : 'text-muted-foreground'
               )}
-              title={snowEnabled ? "Disable Snow" : "Enable Snow"}
+              title={snowEnabled ? 'Disable Snow' : 'Enable Snow'}
             >
               <TreePine className="h-5 w-5" />
               <span className="sr-only">Toggle snow effect</span>
@@ -50,4 +52,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

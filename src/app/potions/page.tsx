@@ -1,6 +1,19 @@
 import { getPotions } from '@/lib/data';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
@@ -28,7 +41,7 @@ export default async function PotionsPage() {
       default:
         return 'bg-secondary';
     }
-  }
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -37,38 +50,48 @@ export default async function PotionsPage() {
           Potion Compendium
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          A list of potions, their effects, and the recipes for mixing them. Master the art of alchemy to aid you in your adventures.
+          A list of potions, their effects, and the recipes for mixing them.
+          Master the art of alchemy to aid you in your adventures.
         </p>
       </header>
 
       <Card>
         <CardHeader>
           <CardTitle>Potion Recipes</CardTitle>
-          <CardDescription>All craftable potions and their combinations.</CardDescription>
+          <CardDescription>
+            All craftable potions and their combinations.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">
             <Table>
-                <TableHeader>
-                    <TableRow>
-                        <TableHead>Potion</TableHead>
-                        <TableHead>Color</TableHead>
-                        <TableHead>Ingredients</TableHead>
-                        <TableHead>Effect</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {potions.map(potion => (
-                        <TableRow key={potion.id}>
-                            <TableCell className="font-medium">{potion.name}</TableCell>
-                            <TableCell>
-                                <Badge className={cn('text-primary-foreground', getBadgeColor(potion.color))}>{potion.color}</Badge>
-                            </TableCell>
-                            <TableCell>{potion.ingredients}</TableCell>
-                            <TableCell>{potion.effect}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Potion</TableHead>
+                  <TableHead>Color</TableHead>
+                  <TableHead>Ingredients</TableHead>
+                  <TableHead>Effect</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {potions.map((potion) => (
+                  <TableRow key={potion.id}>
+                    <TableCell className="font-medium">{potion.name}</TableCell>
+                    <TableCell>
+                      <Badge
+                        className={cn(
+                          'text-primary-foreground',
+                          getBadgeColor(potion.color)
+                        )}
+                      >
+                        {potion.color}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>{potion.ingredients}</TableCell>
+                    <TableCell>{potion.effect}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
             </Table>
           </div>
         </CardContent>

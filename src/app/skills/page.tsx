@@ -12,7 +12,8 @@ export default async function SkillsPage() {
           Skill Directory
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          A complete guide to skills in Might and Magic VI, including trainer locations and mastery requirements.
+          A complete guide to skills in Might and Magic VI, including trainer
+          locations and mastery requirements.
         </p>
       </header>
 
@@ -20,4 +21,3 @@ export default async function SkillsPage() {
     </div>
   );
 }
-

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface FestiveContextType {
   snowEnabled: boolean;
@@ -19,12 +19,12 @@ export function FestiveProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("snow-enabled");
-    
+    const saved = localStorage.getItem('snow-enabled');
+
     // Use a small delay to satisfy the strict "no synchronous setState in effect" rule
     // while still ensuring we mount correctly for client-side features.
     const timer = setTimeout(() => {
-      if (saved === "true") {
+      if (saved === 'true') {
         setSnowEnabled(true);
       }
       setMounted(true);
@@ -34,7 +34,7 @@ export function FestiveProvider({ children }: { children: React.ReactNode }) {
 
   const handleSetSnow = (enabled: boolean) => {
     setSnowEnabled(enabled);
-    localStorage.setItem("snow-enabled", enabled.toString());
+    localStorage.setItem('snow-enabled', enabled.toString());
   };
 
   // Avoid hydration mismatch by only providing state after mount
@@ -44,8 +44,6 @@ export function FestiveProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <FestiveContext.Provider value={value}>
-      {children}
-    </FestiveContext.Provider>
+    <FestiveContext.Provider value={value}>{children}</FestiveContext.Provider>
   );
 }

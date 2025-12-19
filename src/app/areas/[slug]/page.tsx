@@ -105,7 +105,8 @@ export default async function AreaPage({ params }: AreaPageProps) {
                 <ul className="list-disc list-inside text-muted-foreground">
                   {area.travel.byFoot.map((route) => (
                     <li key={route.destination}>
-                      {getDestinationLink(route.destination)} ({route.direction})
+                      {getDestinationLink(route.destination)} ({route.direction}
+                      )
                     </li>
                   ))}
                 </ul>
@@ -122,7 +123,8 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     {area.travel.coach.map((route) => (
                       <li key={route.destination}>
-                        {getDestinationLink(route.destination)} ({route.days}) - {route.cost}g
+                        {getDestinationLink(route.destination)} ({route.days}) -{' '}
+                        {route.cost}g
                       </li>
                     ))}
                   </ul>
@@ -137,7 +139,8 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     {area.travel.boat.map((route) => (
                       <li key={route.destination}>
-                        {getDestinationLink(route.destination)} ({route.days}) - {route.cost}g
+                        {getDestinationLink(route.destination)} ({route.days}) -{' '}
+                        {route.cost}g
                       </li>
                     ))}
                   </ul>

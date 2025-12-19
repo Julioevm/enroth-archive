@@ -40,10 +40,13 @@ export function QuestsTable({
   } | null>({ key: 'name', direction: 'ascending' });
 
   const areaSlugToName = useMemo(() => {
-    return areas.reduce((acc, area) => {
-      acc[area.slug] = area.name;
-      return acc;
-    }, {} as Record<string, string>);
+    return areas.reduce(
+      (acc, area) => {
+        acc[area.slug] = area.name;
+        return acc;
+      },
+      {} as Record<string, string>
+    );
   }, [areas]);
 
   const sortedQuests = useMemo(() => {
