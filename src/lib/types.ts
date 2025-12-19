@@ -116,6 +116,7 @@ export interface Shrine {
   month: string;
   name: string;
   location: string;
+  areaSlug: AreaSlug;
 }
 
 export interface Potion {
