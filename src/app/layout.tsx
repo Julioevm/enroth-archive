@@ -6,6 +6,9 @@ import { SiteHeader } from '@/components/layout/header';
 import { SiteFooter } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
+import { FestiveProvider } from '@/components/festive-provider';
+import { SnowEffect } from '@/components/ui/snow-effect';
+
 
 const fontBody = Spectral({
   subsets: ['latin'],
@@ -55,13 +58,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </div>
+          <FestiveProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <SiteHeader />
+              <main className="flex-1">{children}</main>
+              <SiteFooter />
+            </div>
+            <SnowEffect />
+          </FestiveProvider>
           <Toaster />
         </ThemeProvider>
+
       </body>
     </html>
   );
