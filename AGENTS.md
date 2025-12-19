@@ -28,3 +28,8 @@
 - Data will be provided statically in `src/lib/data/` as JSON or TS files.
 - Follow existing patterns in `src/app/` for new pages or features.
 - Make sure when referencing areas, enemies or items, to link to their respective pages using Next.js `<Link>` component.
+
+## Agent Directions
+
+- Don't run next build after changes, this will interfere with the development build of the developer.
+- Run lint and typecheck to ensure no issues are present after a feature is done.

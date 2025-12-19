@@ -34,6 +34,7 @@ export interface Area {
   headline: string;
   mapImageUrl: string;
   mapImageDescription: string;
+  details?: string;
   locations: GameLocation[];
   dungeonIds: string[];
   travel: TravelRoutes;

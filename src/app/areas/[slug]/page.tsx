@@ -65,12 +65,28 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   src={area.mapImageUrl}
                   alt={area.mapImageDescription}
                   fill
+                  sizes="710"
                   className="object-cover"
                   priority
                 />
               </div>
             </CardContent>
           </Card>
+
+          {area.details && (
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="font-headline text-2xl">
+                  Details
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
+                  {area.details}
+                </p>
+              </CardContent>
+            </Card>
+          )}
         </div>
 
         <div className="space-y-8">
