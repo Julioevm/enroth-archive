@@ -15,7 +15,11 @@ export const sweetWater: Area = {
   dungeonIds: ['the-hive'],
   locations: [{ id: 'sw-hive', name: 'The Hive' }],
   travel: {
-    byFoot: [],
+    byFoot: [
+      { destination: 'Paradise Valley', direction: 'South' },
+      { destination: 'Kriegspire', direction: 'East' },
+      { destination: 'Blackshire', direction: 'South-East' },
+    ],
     coach: [],
     boat: [],
   },

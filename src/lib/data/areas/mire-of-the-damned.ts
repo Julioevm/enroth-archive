@@ -42,8 +42,14 @@ export const mireOfTheDamned: Area = {
     { id: 'motd-mines', name: "Snergle's Iron Mines" },
   ],
   travel: {
-    byFoot: [],
-    coach: [],
+    byFoot: [
+      { destination: 'Free Haven', direction: 'North' },
+      { destination: 'Dragonsand', direction: 'West' },
+      { destination: 'Castle Ironfist', direction: 'East' },
+      { destination: 'Blackshire', direction: 'North-West' },
+      { destination: 'Bootleg Bay', direction: 'North-East' },
+    ],
+    coach: [{ destination: 'Free Haven', days: 'Mon, Fri', cost: 250 }],
     boat: [],
   },
   coordinates: { left: 45, top: 65, width: 10, height: 10 },
