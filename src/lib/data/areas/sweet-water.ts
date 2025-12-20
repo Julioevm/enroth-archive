@@ -6,10 +6,14 @@ export const sweetWater: Area = {
   name: 'Sweet Water',
   headline:
     'The site of the first Kreegan landing, now a desolate wasteland where the struggle for the fate of Enroth began.',
+  details: `<ol><li>Fountain (+50 to all 7 stats temporary)</li>
+<li>Obelisk #1</li>
+<li>Tiger Statuette Pedestal [Quest]</li>
+<li><a href="/dungeons/the-hive">The Hive</a></li></ol>`,
   mapImageUrl: '/areas/Sweet_Water_Markers.png',
   mapImageDescription: 'Map of Sweet Water',
-  dungeonIds: [],
-  locations: [],
+  dungeonIds: ['the-hive'],
+  locations: [{ id: 'sw-hive', name: 'The Hive' }],
   travel: {
     byFoot: [],
     coach: [],
