@@ -1,3 +1,136 @@
 import type { Spell } from '../../types';
 
-export const waterSpells: Spell[] = [];
+export const waterSpells: Spell[] = [
+  {
+    id: 'awaken',
+    name: 'Awaken',
+    school: 'Water',
+    description:
+      'Automatically awakens all of your characters from a normal sleep and will awaken them from a magical sleep if they haven’t had the sleep condition for too long. The greater your skill in Water Magic, the longer the sleep condition could have been present before this spell becomes ineffective.',
+    cost: 1,
+    normal: 'Works if asleep less than 3 minutes per point of skill',
+    expert: 'Works if asleep less than 1 hour per point of skill',
+    master: 'Works if asleep less than 1 day per point of skill',
+    imageUrl: '/spells/Spell_Awaken.gif',
+  },
+  {
+    id: 'cold-beam',
+    name: 'Cold Beam',
+    school: 'Water',
+    description:
+      'Targets a single monster with a field of extreme cold for an instant. It only does 2-6 points of damage, but it always hits. The more skill you have in Water Magic, the faster you will recover from casting Cold Beam. Masters of Water can cast this spell without cost.',
+    cost: 2,
+    normal: 'Casting cost 2 spell points',
+    expert: 'Casting cost 1spell point. Quicker recovery rate',
+    master: 'Casting cost 0 spell points. Quickest recovery rate',
+    imageUrl: '/spells/Spell_Cold_Beam.gif',
+  },
+  {
+    id: 'protection-from-cold',
+    name: 'Protection from Cold',
+    school: 'Water',
+    description:
+      'Increases all your characters’ resistance to Cold by an amount equal to your skill in Water Magic. This spell lasts for one hour per point of skill in Water Magic.',
+    cost: 3,
+    normal: '1 point resistance per point of skill',
+    expert: '2 points resistance per point of skill',
+    master: '3 points resistance per point of skill',
+    imageUrl: '/spells/Spell_Protection_from_Cold.gif',
+  },
+  {
+    id: 'poison-spray',
+    name: 'Poison Spray',
+    school: 'Water',
+    description:
+      'Sprays poison at monsters directly in front of your characters. Damage is low, but few monsters have resistance to poison, so it usually works. Each shot does 2 points of damage plus 1-2 per point of skill in Water Magic.',
+    cost: 4,
+    normal: 'Moderate recovery rate and 1 shot',
+    expert: 'Faster recovery rate and 3 shots',
+    master: 'Fastest recovery rate and 5 shots',
+    imageUrl: '/spells/Spell_Poison_Spray.gif',
+  },
+  {
+    id: 'water-walk',
+    name: 'Water Walk',
+    school: 'Water',
+    description:
+      'Only useful outdoors, Water Walk lets your characters walk along the surface of water without sinking. This spell can be very useful, but constantly drains one spell point every 20 minutes while in contact with water.',
+    cost: 5,
+    normal: 'Duration 5 minutes per point of skill',
+    expert: 'Duration 10 minutes per point of skill',
+    master: 'Duration 1 hour per point of skill',
+    imageUrl: '/spells/Spell_Water_Walk.gif',
+  },
+  {
+    id: 'ice-bolt',
+    name: 'Ice Bolt',
+    school: 'Water',
+    description:
+      'Fires a single bolt of ice at a single target. It always hits and does 1-7 points of damage per point of skill in Water Magic.',
+    cost: 8,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Ice_Bolt.gif',
+  },
+  {
+    id: 'enchant-item',
+    name: 'Enchant Item',
+    school: 'Water',
+    description:
+      'Gives a chance to imbue a normal item with magical powers. The chance of success is 10% per point of skill in Water Magic. Experts manage better enchantments, and only masters can enchant weapons.',
+    cost: 10,
+    normal: 'Weak enchantments only',
+    expert: 'Stronger enchantments',
+    master: 'Allows enchantment of weapons',
+    imageUrl: '/spells/Spell_Enchant_Item.gif',
+  },
+  {
+    id: 'acid-burst',
+    name: 'Acid Burst',
+    school: 'Water',
+    description:
+      'Acid burst squirts a jet of extremely caustic acid at a single victim. It always hits and does 9 points of damage plus 1-9 per point of skill. The big advantage of this spell is few monsters are resistant to acid.',
+    cost: 15,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Acid_Burst.gif',
+  },
+  {
+    id: 'town-portal',
+    name: 'Town Portal',
+    school: 'Water',
+    description:
+      'Town Portal teleports the party to the central fountain of the last town visited. Town Portal has a 10% chance per point of Water Magic skill of working when cast.',
+    cost: 20,
+    normal: 'Outdoors only',
+    expert: 'Indoors OK',
+    master: 'Works anywhere and gives choice of destination',
+    imageUrl: '/spells/Spell_Town_Portal.gif',
+  },
+  {
+    id: 'ice-blast',
+    name: 'Ice Blast',
+    school: 'Water',
+    description:
+      'Fires a ball of ice in the direction the caster is facing. The ball will shatter when it hits something, launching 7 shards of ice in all directions except the caster’s. The shards will ricochet until they strike a creature or melt. Each shard does 12 points of damage plus 1-2 per point of skill in Water Magic.',
+    cost: 25,
+    normal: 'Slow rate of recovery',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Ice_Blast.gif',
+  },
+  {
+    id: 'lloyds-beacon',
+    name: "Lloyd's Beacon",
+    school: 'Water',
+    description:
+      'Lloyd’s Beacon lets you place a marker at a location you want to teleport back to in the future. Just how far in the future depends on your skill and ranking in Water Magic. Cast this spell whenever you wish to either place a marker or return to one.',
+    cost: 30,
+    normal: '1 Beacon, decays in 1 hour per point of skill',
+    expert: '3 Beacons, decays in 1 day per point of skill',
+    master: '5 Beacons, decays in 1 week per point of skill',
+    imageUrl: "/spells/Spell_Lloyd's_Beacon.gif",
+  },
+];

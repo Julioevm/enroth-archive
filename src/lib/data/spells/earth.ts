@@ -1,3 +1,136 @@
 import type { Spell } from '../../types';
 
-export const earthSpells: Spell[] = [];
+export const earthSpells: Spell[] = [
+  {
+    id: 'stun',
+    name: 'Stun',
+    school: 'Earth',
+    description:
+      'Slaps a monster with magical force, forcing it to recover from the stun spell before it can do anything else. Stun also knocks monsters back a little, giving you a chance to get away while the getting is good. The greater your skill in Earth Magic, the greater the effect of the spell.',
+    cost: 1,
+    normal: 'Normal effect',
+    expert: 'Stronger effect',
+    master: 'Strongest effect',
+    imageUrl: '/spells/Spell_Stun.gif',
+  },
+  {
+    id: 'magic-arrow',
+    name: 'Magic Arrow',
+    school: 'Earth',
+    description:
+      'Creates and fires a single magical arrow. Unlike most spells, this spell is inaccurate and has the same chance of hitting as a regular arrow (using your Earth Magic skill as a bonus to hit). Also unlike most spells, Magic Arrow is free to cast when you become a Master of Earth. The arrow does 3-8 points of damage.',
+    cost: 2,
+    normal: 'Casting cost 2 spell points',
+    expert: 'Casting cost 1 spell point. Quicker recovery rate',
+    master: 'Casting cost 0 spell points. Quickest recovery rate',
+    imageUrl: '/spells/Spell_Magic_Arrow.gif',
+  },
+  {
+    id: 'protection-from-magic',
+    name: 'Protection from Magic',
+    school: 'Earth',
+    description:
+      'Increases all your characters’ resistance to magic by an amount equal to your skill in Earth Magic.',
+    cost: 3,
+    normal: '1 point resistance per point of skill',
+    expert: '2 points resistance per point of skill',
+    master: '3 points resistance per point of skill',
+    imageUrl: '/spells/Spell_Protection_from_Magic.gif',
+  },
+  {
+    id: 'deadly-swarm',
+    name: 'Deadly Swarm',
+    school: 'Earth',
+    description:
+      'Summons a swarm of biting, stinging insects to bedevil a single target. The swarm only does 5 points of damage plus 1-3 per point of skill in Earth Magic, but it never misses and the damage is physical, making resistance to this spell unlikely.',
+    cost: 4,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Deadly_Swarm.gif',
+  },
+  {
+    id: 'stone-skin',
+    name: 'Stone Skin',
+    school: 'Earth',
+    description:
+      'Increases the armor class of a character by 5 + 1 point per point of skill in Earth Magic.',
+    cost: 5,
+    normal: 'Duration 1 hour + 5 minutes per point of skill',
+    expert: 'Spell affects entire party',
+    master: 'Duration 1 hour + 15 minutes per point of skill',
+    imageUrl: '/spells/Spell_Stone_Skin.gif',
+  },
+  {
+    id: 'blades',
+    name: 'Blades',
+    school: 'Earth',
+    description:
+      'Fires a rotating, razor-thin metal blade at a single monster. This spell can miss, and damage and chance to hit rely heavily on Earth Magic skill. The blade does 1-5 points of damage per point of skill in Earth Magic.',
+    cost: 8,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Blades.gif',
+  },
+  {
+    id: 'stone-to-flesh',
+    name: 'Stone to Flesh',
+    school: 'Earth',
+    description:
+      'Removes the stoned condition from a character if you cast this spell in time. The greater the skill and rank in Earth Magic the longer the condition could have been present before the “point of no return” is reached. After that, the only way to remove the condition short of Divine Intervention is to visit a temple.',
+    cost: 10,
+    normal: 'Works if stoned less than 3 minutes per point of skill',
+    expert: 'Works if stoned less than 1 hour per point of skill',
+    master: 'Works if stoned less than 1 day per point of skill',
+    imageUrl: '/spells/Spell_Stone_to_Flesh.gif',
+  },
+  {
+    id: 'rock-blast',
+    name: 'Rock Blast',
+    school: 'Earth',
+    description:
+      'Releases a magical stone into the world that will explode when it comes into contact with a creature or enough time passes. The rock will bounce and roll until it finds a resting spot, so be careful not to be caught in the blast. The explosion causes 1-8 points of damage per point of skill in Earth Magic.',
+    cost: 15,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Rock_Blast.gif',
+  },
+  {
+    id: 'turn-to-stone',
+    name: 'Turn to Stone',
+    school: 'Earth',
+    description:
+      'Temporarily turns a target to stone. These stone statues are invulnerable to any sort of attack.',
+    cost: 20,
+    normal: 'Duration 5 minutes per point of skill',
+    expert: 'Duration 10 minutes per point of skill',
+    master: 'Duration 20 minutes per point of skill',
+    imageUrl: '/spells/Spell_Turn_to_Stone.gif',
+  },
+  {
+    id: 'death-blossom',
+    name: 'Death Blossom',
+    school: 'Earth',
+    description:
+      'Fires a magical stone far into the air that creates a very large and powerful explosion when it lands. The damage is 20 points plus 1 per point of skill in Earth Magic. This spell can only be used outdoors.',
+    cost: 25,
+    normal: 'Moderate rate of recovery',
+    expert: 'Faster recovery, larger radius of effect',
+    master: 'Fastest recovery, largest radius of effect',
+    imageUrl: '/spells/Spell_Death_Blossom.gif',
+  },
+  {
+    id: 'mass-distortion',
+    name: 'Mass Distortion',
+    school: 'Earth',
+    description:
+      'Increases the weight of a single target enormously for an instant, causing internal damage equal to 25% of the monster’s hit points plus another 2% per point of skill in Earth Magic. The bigger they are, the harder they fall.',
+    cost: 30,
+    normal: 'Slow rate of recovery',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Mass_Distortion.gif',
+  },
+];

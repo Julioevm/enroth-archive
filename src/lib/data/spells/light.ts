@@ -1,3 +1,136 @@
 import type { Spell } from '../../types';
 
-export const lightSpells: Spell[] = [];
+export const lightSpells: Spell[] = [
+  {
+    id: 'create-food',
+    name: 'Create Food',
+    school: 'Light',
+    description:
+      'Creates food for all of your characters if you have less real food than would be created by this spell.',
+    cost: 5,
+    normal: 'Creates 1 day + 1 day per 10 points skill',
+    expert: 'Creates 1 day + 2 days per 10 points skill',
+    master: 'Creates 1 day + 3 days per 10 points skill',
+    imageUrl: '/spells/Spell_Create_Food.gif',
+  },
+  {
+    id: 'golden-touch',
+    name: 'Golden Touch',
+    school: 'Light',
+    description:
+      'Converts a single item you select in your inventory into gold equal to 40% of the item’s actual value. There is a 10% chance per point of skill in Light Magic that this spell will succeed. If the spell fails, the item is broken.',
+    cost: 10,
+    normal: 'Converts item to 40% gold value',
+    expert: 'Converts item to 60% gold value',
+    master: 'Converts item to 80% gold value',
+    imageUrl: '/spells/Spell_Golden_Touch.gif',
+  },
+  {
+    id: 'dispel-magic',
+    name: 'Dispel Magic',
+    school: 'Light',
+    description:
+      'Removes all spells on all creatures in the caster’s sight, both helpful and harmful. Recovery is reduced by an amount equal to skill in Light Magic.',
+    cost: 15,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Dispel_Magic.gif',
+  },
+  {
+    id: 'slow',
+    name: 'Slow',
+    school: 'Light',
+    description:
+      'Halves the walking speed and doubles the recovery rate of a single monster. Slow makes sure a monster will attack you half as often, and will have a harder time catching up to you if you choose to run. The duration of this spell is 3 minutes per point of skill in Light Magic.',
+    cost: 20,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Slow.gif',
+  },
+  {
+    id: 'destroy-undead',
+    name: 'Destroy Undead',
+    school: 'Light',
+    description:
+      'Calls upon the power of Heaven to undo the evil magic that extends the lives of the Undead, inflicting 16 points of damage plus 1-16 per point of skill in Light Magic upon a single, unlucky target. This spell only works on the Undead.',
+    cost: 25,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Destroy_Undead.gif',
+  },
+  {
+    id: 'day-of-the-gods',
+    name: 'Day of the Gods',
+    school: 'Light',
+    description:
+      'Simultaneously casts Power, Meditation, Speed, Lucky Day, Precision, and GA on all your characters for one easy payment. Day of the Gods is cast at your skill in Light Magic.',
+    cost: 30,
+    normal: 'All spells cast at twice skill in Light Magic',
+    expert: 'All spells cast at three times skill',
+    master: 'All spells cast at four times skill',
+    imageUrl: '/spells/Spell_Day_of_the_Gods.gif',
+  },
+  {
+    id: 'prismatic-light',
+    name: 'Prismatic Light',
+    school: 'Light',
+    description:
+      'Inflicts 25 points of damage plus 1 per point of skill in Light Magic on all creatures in sight. This spell can only be cast indoors.',
+    cost: 35,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Prismatic_Light.gif',
+  },
+  {
+    id: 'hour-of-power',
+    name: 'Hour of Power',
+    school: 'Light',
+    description:
+      'Simultaneously casts Haste, Heroism, Shield, Stone Skin, and Bless on all your characters at your skill in Light Magic.',
+    cost: 40,
+    normal: 'All spells cast at twice skill in Light Magic',
+    expert: 'All spells cast at three times skill',
+    master: 'All spells cast at four times skill',
+    imageUrl: '/spells/Spell_Hour_of_Power.gif',
+  },
+  {
+    id: 'paralyze',
+    name: 'Paralyze',
+    school: 'Light',
+    description:
+      "Paralyze temporarily prevents a monster from moving or attacking for the (short) duration of this spell, which is 3 minutes per point of skill in Light Magic. You are free to attack your helpless target 'til your heart's content--paralyzed monsters cannot retaliate.",
+    cost: 45,
+    normal: 'Slow recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Paralyze.gif',
+  },
+  {
+    id: 'sun-ray',
+    name: 'Sun Ray',
+    school: 'Light',
+    description:
+      'Sun Ray is the second most devastating spell in Enroth, concentrating the light of the sun on one unfortunate creature. Since Sun Ray must focus the light of the sun, it can only work outdoors and during the day. Sun Ray does 20 points of damage plus 1-20 per point of skill in Light Magic.',
+    cost: 50,
+    normal: 'Very slow recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Sun_Ray.gif',
+  },
+  {
+    id: 'divine-intervention',
+    name: 'Divine Intervention',
+    school: 'Light',
+    description:
+      'Once per day during the rising or setting of the sun, you may call upon the heavens to heal your characters of all damage, restore your spell points, and remove all adverse conditions. The gods exact a price, however, aging the caster 10 years for each Divine Intervention. Recovery from this spell is shortend with skill in Light Magic.',
+    cost: 55,
+    normal: 'Only works once per day',
+    expert: 'Only works twice per day',
+    master: 'Only works three times per day',
+    imageUrl: '/spells/Spell_Divine_Intervention.gif',
+  },
+];
