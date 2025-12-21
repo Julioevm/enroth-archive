@@ -1,25 +1,22 @@
 import type { Spell } from '../types';
+import { fireSpells } from './spells/fire';
+import { airSpells } from './spells/air';
+import { waterSpells } from './spells/water';
+import { earthSpells } from './spells/earth';
+import { spiritSpells } from './spells/spirit';
+import { mindSpells } from './spells/mind';
+import { bodySpells } from './spells/body';
+import { lightSpells } from './spells/light';
+import { darkSpells } from './spells/dark';
 
 export const spells: Spell[] = [
-  {
-    id: 'torch-light',
-    name: 'Torch Light',
-    school: 'Fire',
-    description: 'Creates a magical light source that follows the party.',
-    cost: '1 SP',
-  },
-  {
-    id: 'first-aid',
-    name: 'First Aid',
-    school: 'Body',
-    description: 'Heals a small amount of damage to a single character.',
-    cost: '2 SP',
-  },
-  {
-    id: 'bless',
-    name: 'Bless',
-    school: 'Spirit',
-    description: "Temporarily increases a character's Accuracy and Damage.",
-    cost: '3 SP',
-  },
+  ...fireSpells,
+  ...airSpells,
+  ...waterSpells,
+  ...earthSpells,
+  ...spiritSpells,
+  ...mindSpells,
+  ...bodySpells,
+  ...lightSpells,
+  ...darkSpells,
 ];

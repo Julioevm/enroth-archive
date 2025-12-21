@@ -1,0 +1,136 @@
+import type { Spell } from '../../types';
+
+export const airSpells: Spell[] = [
+  {
+    id: 'wizard-eye',
+    name: 'Wizard Eye',
+    school: 'Air',
+    description:
+      'Wizard Eye causes the automap located in the upper right corner of the main gaming screen to show the locations of monsters and other points of interest while outdoors. The spell lasts 1 hour per point of skill in Air Magic.',
+    cost: 1,
+    normal: 'Only shows terrain and monsters',
+    expert: 'Shows treasure',
+    master: 'Shows "points of interest"',
+    imageUrl: '/spells/Spell_Wizard_Eye.gif',
+  },
+  {
+    id: 'static-charge',
+    name: 'Static Charge',
+    school: 'Air',
+    description:
+      'Targets a single monster with a jolt of static electricity. It only does 2-6 points of damage, but it always hits.',
+    cost: 2,
+    normal: 'Casting cost 2 spell points',
+    expert: 'Casting cost 1 spell point. Quicker recovery rate',
+    master: 'Casting cost 0 spell points. Quickest recovery rate',
+    imageUrl: '/spells/Spell_Static_Charge.gif',
+  },
+  {
+    id: 'protection-from-electricity',
+    name: 'Protection from Electricity',
+    school: 'Air',
+    description:
+      'Increases all your characters’ resistance to Electricity by an amount equal to your skill in Air Magic.',
+    cost: 3,
+    normal: '1 point resistance per point of skill',
+    expert: '2 points resistance per point of skill',
+    master: '3 points resistance per point of skill',
+    imageUrl: '/spells/Spell_Protection_from_Electricity.gif',
+  },
+  {
+    id: 'sparks',
+    name: 'Sparks',
+    school: 'Air',
+    description:
+      'Sparks fires small balls of lightning into the world that bounce around until they hit something or dissipate. It is hard to tell where they will go, so this spell is best used in a room crowded with small monsters. Each spark does 2 points plus 1 per point of skill in Air Magic.',
+    cost: 4,
+    normal: 'Moderate recovery rate, 3 sparks',
+    expert: 'Faster recovery rate, 5 sparks',
+    master: 'Fastest recovery rate, 7 sparks',
+    imageUrl: '/spells/Spell_Sparks.gif',
+  },
+  {
+    id: 'feather-fall',
+    name: 'Feather Fall',
+    school: 'Air',
+    description:
+      'Feather Fall prevents your characters from being hurt when falling more than ten feet by slowing the speed of the fall. Feather Fall affects your entire party with one casting and has a duration based on your skill in Air Magic.',
+    cost: 5,
+    normal: 'Duration 5 minutes per point of skill',
+    expert: 'Duration 10 minutes per point of skill',
+    master: 'Duration 1 hour per point of skill',
+    imageUrl: '/spells/Spell_Feather_Fall.gif',
+  },
+  {
+    id: 'shield',
+    name: 'Shield',
+    school: 'Air',
+    description:
+      'Halves damage from incoming ranged attacks (such as rocks and arrows) by slowing the missiles down just before they hit.',
+    cost: 8,
+    normal: 'Duration 1 hour + 5 minutes per point of skill',
+    expert: 'Spell affects entire party',
+    master: 'Duration 1 hour + 15 minutes per point of skill',
+    imageUrl: '/spells/Spell_Shield.gif',
+  },
+  {
+    id: 'lightning-bolt',
+    name: 'Lightning Bolt',
+    school: 'Air',
+    description:
+      'Sorcerer’s Darling, Lightning Bolt discharges electricity from the caster’s hand to a single target. It always hits and does 1-8 points of damage per point of skill in Air Magic.',
+    cost: 10,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Lightning_Bolt.gif',
+  },
+  {
+    id: 'jump',
+    name: 'Jump',
+    school: 'Air',
+    description:
+      'Jump launches your party up in the air, landing you 60 feet from where you started. Your party takes no falling damage from the jump.',
+    cost: 15,
+    normal: 'Slow recovery rate (faster for high skill ranking)',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Jump.gif',
+  },
+  {
+    id: 'implosion',
+    name: 'Implosion',
+    school: 'Air',
+    description:
+      'Implosion is a nasty spell that affects a single target by destroying the air around it, causing a sudden inrush from the surrounding air, a thunderclap, and 10 points plus 1-10 points of damage per point of skill in Air Magic.',
+    cost: 20,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Implosion.gif',
+  },
+  {
+    id: 'fly',
+    name: 'Fly',
+    school: 'Air',
+    description:
+      "Grants the power of flight to your characters! This spell is very expensive and only works outdoors, but it is very useful. Fly will drain one spell point every five minutes it is in use (I.E. when you aren't touching the ground).",
+    cost: 25,
+    normal: 'Duration 5 minutes per point of skill',
+    expert: 'Duration 10 minutes per point of skill',
+    master: 'Duration 1 hour per point of skill',
+    imageUrl: '/spells/Spell_Fly.gif',
+  },
+  {
+    id: 'starburst',
+    name: 'Starburst',
+    school: 'Air',
+    description:
+      'Calls stars from the heavens to smite and burn your enemies. Expert and Master ranking in this spell both increase the number of stars called and speed recovery. The damage for each star is 20 points plus 1 per point of skill in Air Magic, and Starburst only works outdoors. Try not to get caught in the blast…',
+    cost: 30,
+    normal: 'Slow recovery rate and 8 stars',
+    expert: 'Faster recovery rate and 12 stars',
+    master: 'Fastest recovery rate and 16 stars',
+    imageUrl: '/spells/Spell_Starburst.gif',
+  },
+];

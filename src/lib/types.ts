@@ -108,7 +108,11 @@ export interface Spell {
     | 'Light'
     | 'Dark';
   description: string;
-  cost: string;
+  cost: number;
+  normal: string;
+  expert: string;
+  master: string;
+  imageUrl: string;
 }
 
 export interface Item {

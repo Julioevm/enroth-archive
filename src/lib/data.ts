@@ -56,6 +56,10 @@ export function getSpells(): Spell[] {
   return spells;
 }
 
+export function getSpellsBySchool(school: string): Spell[] {
+  return spells.filter((s) => s.school.toLowerCase() === school.toLowerCase());
+}
+
 export function getItems(): Item[] {
   return items;
 }

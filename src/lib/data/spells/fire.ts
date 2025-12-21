@@ -1,0 +1,136 @@
+import type { Spell } from '../../types';
+
+export const fireSpells: Spell[] = [
+  {
+    id: 'torch-light',
+    name: 'Torch Light',
+    school: 'Fire',
+    description:
+      'Torch light increases the radius of light surrounding your party in the dark.',
+    cost: 1,
+    normal: 'Duration 1 hour per point of skill',
+    expert: 'Brighter light',
+    master: 'Brightest light',
+    imageUrl: '/spells/Spell_Torch_Light.gif',
+  },
+  {
+    id: 'flame-arrow',
+    name: 'Flame Arrow',
+    school: 'Fire',
+    description:
+      'Creates and fires a single flaming arrow. Unlike most spells, this spell is notoriously inaccurate and has the same chance of hitting as a regular arrow (using your Fire skill as a bonus to hit). The arrow does 1-8 points of damage when it hits.',
+    cost: 2,
+    normal: 'Casting cost 2 spell points',
+    expert: 'Casting cost 1 spell point. Quicker recovery rate',
+    master: 'Casting cost 0 spell points. Quickest recovery rate',
+    imageUrl: '/spells/Spell_Flame_Arrow.gif',
+  },
+  {
+    id: 'protection-from-fire',
+    name: 'Protection from Fire',
+    school: 'Fire',
+    description:
+      'Increases all your characters’ resistance to fire by an amount equal to your skill in Fire Magic and lasts one hour per point of skill in Fire Magic.',
+    cost: 3,
+    normal: '1 point resistance per point of skill',
+    expert: '2 points resistance per point of skill',
+    master: '3 points resistance per point of skill',
+    imageUrl: '/spells/Spell_Protection_from_Fire.gif',
+  },
+  {
+    id: 'fire-bolt',
+    name: 'Fire Bolt',
+    school: 'Fire',
+    description:
+      'Launches a burst of fire at a single target. Damage is 1-4 points of damage per point of skill in Fire Magic, but casting cost is low. Firebolt is safe and effective—the “Old Reliable” of the Sorcerer’s arsenal.',
+    cost: 4,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Fire_Bolt.gif',
+  },
+  {
+    id: 'haste',
+    name: 'Haste',
+    school: 'Fire',
+    description:
+      'Reduces the time it takes to recover from casting a spell or attacking with a weapon. Characters will be weak for six hours after this spell wears off.',
+    cost: 5,
+    normal: 'Duration 1 hour + 1 minute per skill point',
+    expert: 'Spell affects entire party',
+    master: 'Duration 1 hour + 3 minutes per skill point',
+    imageUrl: '/spells/Spell_Haste.gif',
+  },
+  {
+    id: 'fireball',
+    name: 'Fireball',
+    school: 'Fire',
+    description:
+      'Another Sorcerer’s favorite, fireball targets a single monster, but explodes to hurt anyone else caught in the blast. If your party is too close to the blast, they will be hurt as well. Fireball does 1-6 points of damage per point of skill in Fire Magic.',
+    cost: 8,
+    normal: 'Moderate recovery rate',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Fireball.gif',
+  },
+  {
+    id: 'ring-of-fire',
+    name: 'Ring of Fire',
+    school: 'Fire',
+    description:
+      'Generates a ring of fire around the party that damages all monsters it contacts. Happily, Ring of Fire is safe and will not damage your own characters. Ring of Fire does six points of damage plus one per point of skill in Fire Magic.',
+    cost: 10,
+    normal: 'Small radius of effect around party',
+    expert: 'Larger radius',
+    master: 'Quicker recovery rate',
+    imageUrl: '/spells/Spell_Ring_of_Fire.gif',
+  },
+  {
+    id: 'fire-blast',
+    name: 'Fire Blast',
+    school: 'Fire',
+    description:
+      'Launches streaks of fire in the direction the characters are facing. The bolts only hit monsters that stand in their way, so a little aiming practice will help you get the most benefit from Fire Blast. Fire Blast does 4 points of damage plus 1-3 per point of skill in Fire Magic.',
+    cost: 15,
+    normal: 'Slow rate of recovery and 3 shots',
+    expert: 'Moderate rate of recovery and 5 shots',
+    master: 'Quick rate of recovery and 7 shots',
+    imageUrl: '/spells/Spell_Fire_Blast.gif',
+  },
+  {
+    id: 'meteor-shower',
+    name: 'Meteor Shower',
+    school: 'Fire',
+    description:
+      'Summons flaming rocks from the sky in a large radius surrounding your chosen target. Try not to be near the victim when you use this spell. A single meteor does 8 points of damage plus 1 per point of skill in Fire Magic. This spell only works outdoors.',
+    cost: 20,
+    normal: 'Slow rate of recovery and 8 meteors',
+    expert: 'Moderate rate of recovery and 12 meteors',
+    master: 'Quick rate of recovery and 16 meteors',
+    imageUrl: '/spells/Spell_Meteor_Shower.gif',
+  },
+  {
+    id: 'inferno',
+    name: 'Inferno',
+    school: 'Fire',
+    description:
+      'Inferno burns all monsters in sight when cast, excluding your characters. Good for cleaning out rooms full of weak or moderate strength monsters in one or two easy castings. Each monster takes 12 points of damage plus 1 per point of skill in Fire Magic. This spell only works indoors.',
+    cost: 25,
+    normal: 'Slow rate of recovery',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Inferno.gif',
+  },
+  {
+    id: 'incinerate',
+    name: 'Incinerate',
+    school: 'Fire',
+    description:
+      'Amongst the strongest direct damage spells available, Incinerate inflicts massive damage on a single target. Only the strongest of monsters can expect to survive this spell. Damage is 15 points plus 1-15 per point of skill in Fire Magic.',
+    cost: 30,
+    normal: 'Slow rate of recovery',
+    expert: 'Faster recovery rate',
+    master: 'Fastest recovery rate',
+    imageUrl: '/spells/Spell_Incinerate.gif',
+  },
+];
