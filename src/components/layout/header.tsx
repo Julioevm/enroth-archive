@@ -24,6 +24,7 @@ const navItems = [
   { name: 'Items', href: '/items' },
   { name: 'Potions', href: '/potions' },
   { name: 'Shrines', href: '/shrines' },
+  { name: 'Links', href: '/links' },
 ];
 
 export function SiteHeader() {
