@@ -1,4 +1,6 @@
 import { getQuests, getAreas } from '@/lib/data';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -15,8 +17,8 @@ export default async function QuestsPage({
 }) {
   const params = await searchParams;
   const area = typeof params.area === 'string' ? params.area : undefined;
-  const quests = await getQuests();
-  const areas = await getAreas();
+  const quests = getQuests();
+  const areas = getAreas();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -24,10 +26,15 @@ export default async function QuestsPage({
         <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-4">
           Quest Directory
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
           Browse all available quests in the world of Enroth. Use the filters to
           narrow down your search.
         </p>
+        <div className="flex justify-center gap-4">
+          <Button asChild>
+            <Link href="/quests/promotions">View Class Promotions</Link>
+          </Button>
+        </div>
       </header>
 
       <Card>

@@ -143,6 +143,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Crusader',
     areaSlug: 'castle-ironfist',
     locationName: 'Silver Helm Outpost',
+    promotionClass: 'Paladin',
   },
   {
     id: 'kilburns-shield',
@@ -186,6 +187,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Wizard',
     areaSlug: 'misty-islands',
     locationName: 'Fountain of Magic',
+    promotionClass: 'Sorcerer',
   },
   {
     id: 'storm-silver-helm',
@@ -240,6 +242,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Cavalier',
     areaSlug: 'free-haven',
     locationName: 'Inn of Free Haven',
+    promotionClass: 'Knight',
   },
   {
     id: 'find-lost-artifact',
@@ -289,6 +292,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Champion',
     areaSlug: 'free-haven',
     locationName: "Warlord's Fortress",
+    promotionClass: 'Knight',
   },
   {
     id: 'crystal-of-terrax',
@@ -302,6 +306,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Archmage',
     areaSlug: 'misty-islands',
     locationName: "Corlagon's Estate",
+    promotionClass: 'Sorcerer',
   },
   {
     id: 'slay-longfang',
@@ -315,6 +320,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Hero',
     areaSlug: 'castle-ironfist',
     locationName: "Dragon's Lair",
+    promotionClass: 'Paladin',
   },
   {
     id: 'destroy-book-liches',
@@ -353,6 +359,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Priest',
     areaSlug: 'frozen-highlands',
     locationName: 'Temple in Free Haven',
+    promotionClass: 'Cleric',
   },
   {
     id: 'capture-prince-thieves',
@@ -396,6 +403,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Great Druid',
     areaSlug: 'silver-cove',
     locationName: 'Circle of Stones',
+    promotionClass: 'Druid',
   },
   {
     id: 'deface-altar',
@@ -421,6 +429,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Arch Druid',
     areaSlug: 'silver-cove',
     locationName: 'Temple of the Moon',
+    promotionClass: 'Druid',
   },
   {
     id: 'sacred-chalice',
@@ -434,6 +443,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) High Priest',
     areaSlug: 'frozen-highlands',
     locationName: 'Temple of the Sun',
+    promotionClass: 'Cleric',
   },
   {
     id: 'end-winter',
@@ -461,6 +471,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Battle Mage',
     areaSlug: 'frozen-highlands',
     locationName: 'Icewind Keep',
+    promotionClass: 'Archer',
   },
   {
     id: 'reset-dragon-towers',
@@ -475,6 +486,7 @@ export const quests: Quest[] = [
     award: 'Received promotion to (honorary) Warrior Mage',
     areaSlug: 'frozen-highlands',
     locationName: 'Dragon Towers',
+    promotionClass: 'Archer',
   },
   {
     id: 'rescue-emmanuel',

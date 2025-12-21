@@ -67,6 +67,13 @@ export interface Quest {
   award: string;
   areaSlug: string;
   locationName?: string;
+  promotionClass?:
+    | 'Knight'
+    | 'Paladin'
+    | 'Archer'
+    | 'Cleric'
+    | 'Sorcerer'
+    | 'Druid';
 }
 
 export interface SkillTrainer {
