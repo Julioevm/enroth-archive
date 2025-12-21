@@ -14,7 +14,7 @@ export function SpellCard({ spell }: SpellCardProps) {
         <div className="flex justify-between items-start gap-4">
           <div className="flex gap-4 items-center">
             {spell.imageUrl && (
-              <div className="relative w-16 h-12 flex-shrink-0 bg-background rounded border overflow-hidden">
+              <div className="relative w-16 h-12 flex-shrink-0">
                 <Image
                   src={spell.imageUrl}
                   alt={spell.name}
@@ -37,12 +37,6 @@ export function SpellCard({ spell }: SpellCardProps) {
       </CardHeader>
       <CardContent className="pt-6 flex-grow">
         <div className="space-y-4">
-          <div>
-            <p className="text-sm italic text-muted-foreground">
-              {spell.description}
-            </p>
-          </div>
-
           <div className="grid gap-3 pt-2">
             <div className="text-sm">
               <span className="font-bold text-primary">Normal:</span>{' '}
@@ -56,6 +50,11 @@ export function SpellCard({ spell }: SpellCardProps) {
               <span className="font-bold text-primary">Master:</span>{' '}
               <span className="text-muted-foreground">{spell.master}</span>
             </div>
+          </div>
+          <div>
+            <p className="text-sm italic text-muted-foreground">
+              {spell.description}
+            </p>
           </div>
         </div>
       </CardContent>
