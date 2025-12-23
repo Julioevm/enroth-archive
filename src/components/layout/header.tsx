@@ -23,6 +23,7 @@ const navItems = [
   { name: 'Spells', href: '/spells' },
   { name: 'Items', href: '/items' },
   { name: 'Potions', href: '/potions' },
+  { name: 'Shops', href: '/shops' },
   { name: 'Shrines', href: '/shrines' },
   { name: 'Mechanics', href: '/mechanics' },
   { name: 'Links', href: '/links' },

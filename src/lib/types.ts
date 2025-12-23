@@ -145,3 +145,36 @@ export interface Potion {
   ingredients: string;
   effect: string;
 }
+
+export interface Shop {
+  id: string;
+  name: string;
+  type: ShopType;
+  location: string;
+  buy?: string;
+  special?: string;
+  destinations?: string[];
+  restriction?: string;
+  cost?: number;
+  maxLevel?: string;
+  food?: number;
+  foodCost?: number;
+  restCost?: number;
+  skills?: string;
+  spells?: string;
+}
+
+export type ShopType =
+  | 'Weapon Shop'
+  | 'Armor Shop'
+  | 'Magic Shop'
+  | 'General Store'
+  | 'Stables'
+  | 'Boats'
+  | 'Temple'
+  | 'Training Hall'
+  | 'Town Hall'
+  | 'Tavern'
+  | 'Bank'
+  | 'Magic Guild'
+  | 'Guild';

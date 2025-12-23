@@ -8,6 +8,8 @@ import type {
   Item,
   Shrine,
   Potion,
+  Shop,
+  ShopType,
 } from './types';
 import { areas } from './data/areas';
 import { dungeons } from './data/dungeons';
@@ -18,6 +20,7 @@ import { quests } from './data/quests';
 import { shrines } from './data/shrines';
 import { skills } from './data/skills';
 import { spells } from './data/spells';
+import { shops } from './data/shops';
 
 // Data access functions
 export function getSkills(): Skill[] {
@@ -70,4 +73,12 @@ export function getShrines(): Shrine[] {
 
 export function getPotions(): Potion[] {
   return potions;
+}
+
+export function getShops(): Shop[] {
+  return shops;
+}
+
+export function getShopsByCategory(category: ShopType): Shop[] {
+  return shops.filter((shop) => shop.type === category);
 }
