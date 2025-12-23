@@ -39,7 +39,7 @@ export function QuestsTable({
   const [sortConfig, setSortConfig] = useState<{
     key: SortKey;
     direction: 'ascending' | 'descending';
-  } | null>({ key: 'name', direction: 'ascending' });
+  } | null>(null);
 
   const areaSlugToName = useMemo(() => {
     return areas.reduce(
