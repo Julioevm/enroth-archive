@@ -31,7 +31,7 @@ export const frozenHighlands: Area = {
 <li>Fountain (+30 Might temporary)</li>
 <li>Shrine of Endurance (April)</li>
 <li>Obelisk #7</li>
-<li>Castle Stone [Quest]</li>
+<li>Castle Stone [Quest, Master Leather Armor , Master Dagger]</li>
 <li>House (Expert Disarm, Protection Services)</li>
 <li>Inn (Rime and Reason)</li>
 <li>Well (Spawns monsters)</li>
